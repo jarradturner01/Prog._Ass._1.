@@ -4,7 +4,10 @@ int main(){
 int f;
 int e;
 int d;
+int i;
 //printf("Hello world\n");
+
+scanf("%c", &i)
 
 for(int i=65; i<91; i++)
  {
@@ -29,6 +32,10 @@ for(int i=65; i<91; i++)
     printf("                          %c is again %d\n", i, d);
  }
 
+for ( d = 0; d < 26; d++) 
+{
+    printf("%c = %d\n", i, d);
+}
 
 
 return(0);
