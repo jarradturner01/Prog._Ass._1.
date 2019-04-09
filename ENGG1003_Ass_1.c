@@ -24,7 +24,7 @@ for(int i=65; i<91; i++)
     
     if (d > 25)
     {
-        d = 0;
+        d = 0;//
     }
     printf("                          %c is again %d\n", i, d);
  }
