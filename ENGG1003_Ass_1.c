@@ -5,7 +5,13 @@ int f;
 int e;
 int d;
 int i;
+int x;
 //printf("Hello world\n");
+
+printf("Please select one of the following:\n" "1- encrytion with rotation cipher (given text + key)")
+
+switch (x)
+
 
 scanf("%c", &i)
 
