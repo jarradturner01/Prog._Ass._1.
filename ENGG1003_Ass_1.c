@@ -12,10 +12,12 @@ printf("Please select one of the following:\n1- encrytion with rotation cipher (
 
 scanf("%d", &x);
 
-//printf("%d", x);
+//k = x + 4;
+
+//printf("%d\n", k);
 
 switch (x){
-    case 1: printf(" your  number %d", x);
+    case 1: printf(" your  number %d\n", x);
     break;
 }
 
