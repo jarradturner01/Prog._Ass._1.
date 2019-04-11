@@ -8,7 +8,7 @@ int i;
 int x;
 //printf("Hello world\n");
 
-printf("Please select one of the following:\n1- encrytion with rotation cipher (given text + key)\n");
+printf("Please select one of the following:\n1) encrytion with rotation cipher (given text + key)\n");
 
 scanf("%d", &x);
 
@@ -18,7 +18,7 @@ scanf("%d", &x);
 
 switch (x){
     case 1: 
-        printf("Please inpit hey to performe encrytion\n");
+        printf("Please input key to perform encrytion\n");
         scanf("%d", &k);
         printf("You've selected %d as your key\n", k);
         for(i = 65; i <= 90; i++){
@@ -26,14 +26,17 @@ switch (x){
         //printf("%c = %d\n", i, f);
         
         e = f + k;
-        if (e > 25){
-            e = e + (f - k);
+        if ( e >= 25 ){
+            e = k - f;
+            printf("%c = %d\n", i, e);
         }
-        else if (e => k){
+        else if (e <= 0){
             
-        }
-        printf("%d\n", e);
+            
         
+            printf("%d\n", e);
+        }
+
         
         
         
