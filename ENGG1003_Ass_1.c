@@ -16,7 +16,7 @@ scanf("%d", &x);
 
 switch (x){
     case 1: printf(" your  number %d", x);
-    
+    break;
 }
 
 
