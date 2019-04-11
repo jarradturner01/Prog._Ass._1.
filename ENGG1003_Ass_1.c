@@ -17,11 +17,25 @@ scanf("%d", &x);
 //printf("%d\n", k);
 
 switch (x){
-    case 1: for(i = 65; i < 95; i++){
+    case 1: 
+        printf("Please inpit hey to performe encrytion\n");
+        scanf("%d", &k);
+        printf("You've selected %d as your key\n", k);
+        for(i = 65; i <= 90; i++){
+        f = i - 65;        
+        //printf("%c = %d\n", i, f);
         
-        f = i - 65;
+        e = f + k;
+        if (e > 25){
+            e = e + (f - k);
+        }
+        else if (e => k){
+            
+        }
+        printf("%d\n", e);
         
-        printf("%c = %d\n", i, f);
+        
+        
         
     }
     
