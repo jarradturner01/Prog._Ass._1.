@@ -10,9 +10,14 @@ int x;
 
 printf("Please select one of the following:\n1- encrytion with rotation cipher (given text + key)\n");
 
-//scanf("%d", &x);
+scanf("%d", &x);
+
 //printf("%d", x);
 
+switch (x){
+    case 1: printf("%d", x);
+    
+}
 
 
   
