@@ -18,7 +18,7 @@ switch (x){
             scanf("%d", &k);
             for(int i=65; i<91; i++){
                 f = i - 65;
-                
+                printf("%c = %d", i, f)
             }
 }
   
@@ -28,7 +28,7 @@ for(int i=65; i<91; i++)
  {
     f = i -65; 
     
-    printf("%c = %d", i, f);
+   // printf("%c = %d", i, f);
     
     e = (f - 1);                   // k is (-1)
     
@@ -36,7 +36,7 @@ for(int i=65; i<91; i++)
     {
         e = 25;
     }
-    printf("       %c is now %d\n", i, e);
+    //printf("       %c is now %d\n", i, e);
     
     d = (e + 1);
     
@@ -44,12 +44,13 @@ for(int i=65; i<91; i++)
     {
         d = 0;//
     }
-    printf("                          %c is again %d\n", i, d);
+  //  printf("                          %c is again %d\n", i, d);
  }
 
 for ( d = 0; d < 26; d++) 
 {
-    printf("%c = %d\n", i, d);
+  //
+  printf("%c = %d\n", i, d);
 }
 
 
