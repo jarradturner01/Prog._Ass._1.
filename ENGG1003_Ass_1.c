@@ -15,7 +15,7 @@ scanf("%d", &x);
 //printf("%d", x);
 
 switch (x){
-    case 1: printf("%d", x);
+    case 1: printf(" your  number %d", x);
     
 }
 
