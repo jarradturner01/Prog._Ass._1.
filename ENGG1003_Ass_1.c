@@ -25,16 +25,21 @@ switch (x){
         f = i - 65;        
         //printf("%c = %d\n", i, f);
         
-        e = f + k;
-        if ( e >= 25 ){
+       
+        if ( 0 <= (f + k) <= 25 )
+        {
             e = k - f;
+            if ( e < 0){
+                e = 26 + e;
+            }
             printf("%c = %d\n", i, e);
         }
-        else if (e <= 0){
+        else if ( (f + k) >= 0)
+        {
             
-            
+            e = 25 + (f + k);
         
-            printf("%d\n", e);
+            printf("LESS %c = %d\n", i, e);
         }
 
         
