@@ -18,6 +18,9 @@ scanf("%d", &x);
 
 switch (x){
     case 1: 
+    
+    FILE *input
+    
         printf("Please input key to perform encrytion\n");
         scanf("%d", &k);       
         if (k == 0)
