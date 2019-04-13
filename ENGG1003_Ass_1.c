@@ -19,8 +19,16 @@ scanf("%d", &x);
 switch (x){
     case 1: 
         printf("Please input key to perform encrytion\n");
-        scanf("%d", &k);
-        printf("You've selected %d as your key\n", k);
+        scanf("%d", &k);       
+        if (k == 0)
+        {
+            printf("Oh, so you're trying to trick me are you?");
+        }
+        else 
+        {
+            printf("You've sleceted%d as yoiur key\n", k);
+        }
+        
         for(i = 65; i <= 90; i++){
         f = i - 65;        
         //printf("%c = %d\n", i, f);
@@ -51,6 +59,7 @@ switch (x){
             }
             printf("LESS %c = %d\n", i, e);
         }
+      
 
         
         
