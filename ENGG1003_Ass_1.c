@@ -6,18 +6,19 @@ int e;
 int k;
 int i;
 int x;
-//printf("Hello world\n");
+//FILE *fopen(const char input, const char r);
+//FILE *fopen(const char output, const char w);
+
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher (given text + key)\n");
 
 scanf("%d", &x);
 
-//k = x + 4;
-
-//printf("%d\n", k);
-
 switch (x){
     case 1: 
+        
+        //FILE *input, *output;
+        
         printf("Please input key to perform encrytion\n");
         scanf("%d", &k);       
         if (k == 0)
