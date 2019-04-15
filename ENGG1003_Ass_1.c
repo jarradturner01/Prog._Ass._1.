@@ -32,32 +32,28 @@ switch (x){
         {
             printf("Oh, so you think boundaries don't matter?\n");
         }
-        else 
+        else if (-25 <= k <= 25)
         {
-            printf("You've sleceted %d as your key\n", k);
+            printf("You've selected %d as your key\n", k);
         }
         
-        switch (k)
+        for(i = 65; i <= 90; i++)
         {
-          case (-25 <= k <= 25):          
-        
-        for(i = 65; i <= 90; i++){
-        f = i - 65;        
-        //printf("%c = %d\n", i, f);
+            f = i - 65;        
+            //printf("%c = %d\n", i, f);
         
         if (k > 0)
-        {
-         if ( 0 <= (f + k) <= 25 )
-           {
-            e = k - f;
+            {
+            if ( 0 <= (f + k) <= 25 )
+            {
+             e = k - f;
             if ( e < 0)
             {
              e = 26 + e;
             }
-            
-            printf("%c = %d\n", i, e);
-           }
-        }
+             printf("%c = %d\n", i, e);
+            }
+            }
         else if (k < 0)
         {
             if ( (f + k) <= 0)
@@ -70,17 +66,11 @@ switch (x){
             }
             printf("%c = %d\n", i, e);
         }
-      }
-        break;
+        }
+     break;   
      }
     
-    break;
-}
-
-
-  
-
-
+    
 
 return(0);
 }
