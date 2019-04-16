@@ -22,7 +22,6 @@ switch (x){
         printf("The following text will be encryted:\n");
         while(feof(input) == 0) {
             fscanf(input, "%c", &c);
-            
             printf("%c", c);
             
         }
@@ -45,14 +44,24 @@ switch (x){
         {
             printf("You've selected %d as your key\n", k);
         }
-        
+     
+    
+     
         for(i = 65; i <= 90; i++)
         {
-            f = i - 65;        
+                   
             //printf("%c = %d\n", i, f);
+            input = fopen("input.txt", "r");
+            while(feof(input)==0){
+                fscanf(input, "%c", &c);
+                //printf("%c", c);
+            }
+            
+            f = i -65;
+         
         
         if (k > 0)
-            {
+        {
             if ( 0 <= (f + k) <= 25 )
             {
              e = k - f;
@@ -60,9 +69,9 @@ switch (x){
             {
              e = 26 + e;
             }
-             printf("%c = %d\n", i, e);
+             //printf("%c = %d\n", i, e);
             }
-            }
+        }
         else if (k < 0)
         {
             if ( (f + k) <= 0)
@@ -73,15 +82,27 @@ switch (x){
             {
              e = 0 + (f + k) ;   
             }
-            printf("%c = %d\n", i, e);
+            //printf("%c = %d\n", i, e);
         }
-        }
+        
+        
+    }
+
+    
+
+
+
+
+        
+
      break;   
      case 2:
         printf("Please enter the rotation's key\n");
         scanf("%d", &d);
         printf("you've selected %d\n", d);
-     }
+    }
+
+    
     
     
 
