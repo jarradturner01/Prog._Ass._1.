@@ -9,6 +9,7 @@ int x;
 
 FILE *input;
 char c;
+int v;
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher\n");
 
@@ -18,15 +19,14 @@ switch (x){
     case 1:  
     
         input = fopen("input.txt", "r");
+        printf("The following text will be encryted:\n");
         while(feof(input) == 0) {
             fscanf(input, "%c", &c);
             
             printf("%c", c);
             
         }
-        
-        
-        
+              
         printf("\nPlease input key to perform encrytion\n");
         scanf("%d", &k);       
         if (k == 0)
