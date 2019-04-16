@@ -3,22 +3,17 @@
 int main(){
 int f;
 int e;
-int k;
+int k, d;
 int i;
 int x;
-//FILE *fopen(const char input, const char r);
-//FILE *fopen(const char output, const char w);
 
 
-printf("Please select one of the following:\n1) encrytion with rotation cipher (given text + key)\n");
+printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher\n");
 
 scanf("%d", &x);
 
 switch (x){
-    case 1: 
-        
-        //FILE *input, *output;
-        
+    case 1:    
         printf("Please input key to perform encrytion\n");
         scanf("%d", &k);       
         if (k == 0)
@@ -69,6 +64,10 @@ switch (x){
         }
         }
      break;   
+     case 2:
+        printf("Please enter the rotation's key\n");
+        scanf("%d", &d);
+        printf("you've selected %d\n", d);
      }
     
     
