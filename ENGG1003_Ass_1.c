@@ -1,11 +1,15 @@
 #include <stdio.h>
 
 int main(){
-int f;
-int e;
+//variables in switch
+int f, e;
 int k, d;
-int i;
-int x;
+//array
+int i[26];
+char a;
+int b;
+//switch
+int x; 
 
 FILE *input;
 char c;
@@ -43,64 +47,55 @@ switch (x){
         else if (-25 <= k <= 25)
         {
             printf("You've selected %d as your key\n", k);
-        }
+        
      
-    
-     
-        for(i = 65; i <= 90; i++)
-        {
-                   
+        for(a = 65; a <= 90; a++){
+            i[a] = 0;
+            b = a - 65;
+            //printf("%c = %d\n", a, b);
+        
             //printf("%c = %d\n", i, f);
             input = fopen("input.txt", "r");
             while(feof(input)==0){
                 fscanf(input, "%c", &c);
                 //printf("%c", c);
             }
-            
-            f = i -65;
-         
-        
+      
         if (k > 0)
         {
-            if ( 0 <= (f + k) <= 25 )
+            if ( 0 <= (b + k) <= 25 )
             {
-             e = k - f;
+             e = k - b;
             if ( e < 0)
             {
              e = 26 + e;
             }
-             //printf("%c = %d\n", i, e);
+            //printf("%c = %d\n", a, e);
             }
         }
         else if (k < 0)
         {
-            if ( (f + k) <= 0)
+            if ( (b + k) <= 0)
             {
-             e = 25 + (f + k);
+             e = 25 + (b + k);
             }
-            else if ( (f + k) > 0)
+            else if ( (b + k) > 0)
             {
-             e = 0 + (f + k) ;   
+             e = 0 + (b + k) ;   
             }
-            //printf("%c = %d\n", i, e);
+            //printf("%c = %d\n", a, e);
         }
-        
-        
-    }
+        }
+        }
 
-    
-
-
-
-
-        
-
-     break;   
+     
+    break;   
      case 2:
         printf("Please enter the rotation's key\n");
         scanf("%d", &d);
         printf("you've selected %d\n", d);
-    }
+}
+
 
     
     
