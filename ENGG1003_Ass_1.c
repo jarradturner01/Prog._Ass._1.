@@ -58,9 +58,11 @@ switch (x){
             input = fopen("input.txt", "r");
             while(feof(input)==0){
                 fscanf(input, "%c", &c);
-                //printf("%c", c);
+                if (c != 32 || c == 0){
+                printf("%c = %d\n", c, c);
             }
-      
+        }
+
         if (k > 0)
         {
             if ( 0 <= (b + k) <= 25 )
