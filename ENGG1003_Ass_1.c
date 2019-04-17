@@ -8,6 +8,7 @@ int k, d;
 int i[26];
 char a;
 int b;
+int n;
 //switch
 int x; 
 
@@ -56,12 +57,24 @@ switch (x){
         
             //printf("%c = %d\n", i, f);
             input = fopen("input.txt", "r");
-            while(feof(input)==0){
+            
+            for(feof(input)==0; n <= 30; n++)
+            {
                 fscanf(input, "%c", &c);
-                if (c != 32 || c == 0){
-                printf("%c = %d\n", c, c);
+                if (n == 32){
+                    printf(" \n");
+                }
+                else if (v != c){
+                   v = c;
+                   if (v == 32){
+                       printf(" \n");
+                   }
+                   else{
+                   printf("%c = %d\n", c, v);
+                   }
+                }
+                
             }
-        }
 
         if (k > 0)
         {
