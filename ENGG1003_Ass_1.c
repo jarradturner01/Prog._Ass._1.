@@ -28,9 +28,7 @@ switch (x){
         while(feof(input) == 0) {
             fscanf(input, "%c", &c);
             printf("%c", c);
-            
         }
-              
         printf("\nPlease input key to perform encrytion\n");
         scanf("%d", &k);       
         if (k == 0)
@@ -50,61 +48,60 @@ switch (x){
             printf("You've selected %d as your key\n", k);
         
      
-        for(a = 65; a <= 90; a++){
-            i[a] = 0;
-            b = a - 65;
+       // for(a = 0; a <= 20; a++){
+         //   i[a] = 0;
+           // b = a - 65;
             //printf("%c = %d\n", a, b);
         
             //printf("%c = %d\n", i, f);
-            input = fopen("input.txt", "r");
-            
-            for(feof(input)==0; n <= 25; n++)
+        input = fopen("input.txt", "r");
+        for(feof(input)==0; n <= 12; n++)
             {
-                fscanf(input, "%c", &c);
-               
-                if (n == 32){
-                    printf(" \n");
+             fscanf(input, "%c", &c);
+              if (n == 32){
+                printf(" \n");
                 }
-                else if (v != c){
-                   v = c;
-                   if (v == 32){
-                       printf(" \n");
+              else if (v != c){
+                v = c;
+                 if (v == 32){
+                   printf(" \n");
                    }
                    else{
-                    v = c - 65;
-                    g = v;
-                    printf("%c = %d\n", c, v);
+                   g = c;   
+                   v = c - 65;
+                   printf("%c = %d\n", c, v);
                    }
                 }
-
-            }
-
+            
         if (k > 0)
         {
-            if ( 0 <= (b + k) <= 25 )
+            if ( 0 <= (v + k) <= 25 )
             {
-             e = k - b;
-            if ( e < 0)
-            {
-             e = 26 + e;
-            }
-            //printf("%c = %d\n", a, e);
+              e = k - v;
+               if ( e < 0)
+               {
+                e = 26 + e;
+               }
+            printf("%c = %d\n", c, e);
             }
         }
         else if (k < 0)
         {
-            if ( (b + k) <= 0)
+            if ( (v + k) <= 0)
             {
-             e = 25 + (b + k);
+             e = 25 + (v + k);
             }
-            else if ( (b + k) > 0)
+            else if ( (v + k) > 0)
             {
-             e = 0 + (b + k) ;   
+             e = 0 + (v + k) ;   
             }
-            //printf("%c = %d\n", a, e);
+            printf("%c = %d\n", c, e);
         }
+        //printf("%c = %d\n", c, e);
         }
-        }
+    }
+
+      //  }
 
      
     break;   
