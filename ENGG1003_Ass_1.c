@@ -72,7 +72,9 @@ switch (x){
                    printf("%c = %d\n", c, v);
                    }
                 }
-            
+     ///////////////////////////////////
+    
+    // if (e == 19){     //instead of 32, 19 appears to be the new value for "space" when encrypting rotation cypher 
         if (k > 0)
         {
             if ( 0 <= (v + k) <= 25 )
@@ -98,10 +100,14 @@ switch (x){
             //printf("%c = %d\n", c, e);
         }
         //printf("%c = %d\n", c, e);
-        }
+        printf(" \n");
+        
+      //  }/////////////////////////////////////////////////
     }
+}
 
-      //  }
+
+        //}
 
      
     break;   
