@@ -95,7 +95,7 @@ switch (x){
             {
              e = 0 + (v + k) ;   
             }
-            printf("%c = %d\n", c, e);
+            //printf("%c = %d\n", c, e);
         }
         //printf("%c = %d\n", c, e);
         }
