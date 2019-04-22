@@ -9,7 +9,8 @@ char c;
 int v, k, e, n;
 
 FILE *input2;
-int f, d;
+int f;
+int d, y;
 
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher\n");
@@ -80,8 +81,10 @@ switch (x){
                {
                 e = 26 + e;
                }
-             printf("%c = %d ", c, e);
-             //printf("%d ", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
+             //printf("%c = %d ", c, e);
+             printf("%d ", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
+            e = e + 65;
+            printf("%c", e);                            //PRINT NEW CHARS
             }
         }
         else if (k < 0)
@@ -95,8 +98,10 @@ switch (x){
             {
              e = 0 + (v + k) ;   
             }
-         printf("%c = %d ", c, e);
-         //printf("%d ", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
+         //printf("%c = %d ", c, e);
+         printf("%d ", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
+         e = e + 65;
+         printf("%c", e);                               //PRINT NEW CHARS
         }
     }
 
@@ -110,17 +115,21 @@ switch (x){
         printf("The following numbers will be decrypted:\n");
         while(feof(input) == 0){
             fscanf(input, "%d", &f);
-         ////////////////////////////////////////////////   if (f = 32){
+            if (f == 32){
                 printf(" ");
-         /////////////////////////   }
+            }
             else{
-            printf("%d", f);
-        }
-    }
+                y = f + 65;
+                printf("%c = %d\n", y, y);
+            }
+            
+           
+       }
+       
 
-        printf("\n Please enter the rotation's key\n");
-        scanf("%d", &d);
-        printf("you've selected %d\n", d);
+       // printf("\n Please enter the rotation's key\n");
+        //scanf("%d", &d);
+        //printf("you've selected %d\n", d);
 }
 
 }
