@@ -81,9 +81,9 @@ switch (x){
                {
                 e = 26 + e;
                }
-             //printf("%c = %d ", c, e);
+             printf("%c = %d ", c, e);
              printf("%d ", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
-            e = e + 65;
+            //e = e + 65;
             printf("%c", e);                            //PRINT NEW CHARS
             }
         }
@@ -98,9 +98,9 @@ switch (x){
             {
              e = 0 + (v + k) ;   
             }
-         //printf("%c = %d ", c, e);
+         printf("%c = %d ", c, e);
          printf("%d ", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
-         e = e + 65;
+        // e = e + 65;
          printf("%c", e);                               //PRINT NEW CHARS
         }
     }
