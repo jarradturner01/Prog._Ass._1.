@@ -54,8 +54,8 @@ switch (x){
              fscanf(input, "%c", &c);
               if (n == 32){
                 printf(" ");
-                }
-              else if (v != c){
+                }                            //OKAY THESE PRINT VALUES DONT TAKE NEW LINES TO AVOID SPCAES IN RESULTS
+              else if (v != c){              //EXCEPT FOR THE PRINT FOR "if" WHEREBY THEY WILL DROP DOWN THE NEXT RESULT
                 v = c;
                  if (v == 32)
                   {
