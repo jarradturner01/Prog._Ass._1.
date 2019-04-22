@@ -2,19 +2,15 @@
 
 int main(){
 //variables in switch
-int f, e;
-int k, d;
-//array
-int i[26];
-char a;
-int b, g;
-int n;
-//switch
 int x; 
 
 FILE *input;
 char c;
-int v;
+int v, k, e, n;
+
+FILE *input2;
+int f, d;
+
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher\n");
 
@@ -49,7 +45,7 @@ switch (x){
         
     
     input = fopen("input.txt", "r");
-        for(feof(input)==0; n <= 25; n++)    
+        for(feof(input)==0; n <= 15; n++)    
             {                                //ENSURE THAT THE INPUT FILE ENDS WITH A SPACE!
                                              //"n" NEEDS TO BE MODIFIED TO HOWEVER LONG "INPUT" ITS WITH 1 SPACE
              fscanf(input, "%c", &c);
@@ -63,7 +59,7 @@ switch (x){
                    printf(" ");
                   }
                  else{
-                   g = c;   
+                      
                    v = c - 65;
                    //printf("%c = %d\n", c, v);
                    }
@@ -84,8 +80,8 @@ switch (x){
                {
                 e = 26 + e;
                }
-             printf("%c = %d\n", c, e);
-             //printf("%d", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
+             printf("%c = %d ", c, e);
+             //printf("%d ", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
             }
         }
         else if (k < 0)
@@ -99,8 +95,8 @@ switch (x){
             {
              e = 0 + (v + k) ;   
             }
-         printf("%c = %d\n", c, e);
-         //printf("%d", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
+         printf("%c = %d ", c, e);
+         //printf("%d ", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
         }
     }
 
@@ -109,7 +105,20 @@ switch (x){
      
     break;   
      case 2:
-        printf("Please enter the rotation's key\n");
+        
+        input = fopen("input2.txt", "r");
+        printf("The following numbers will be decrypted:\n");
+        while(feof(input) == 0){
+            fscanf(input, "%d", &f);
+         ////////////////////////////////////////////////   if (f = 32){
+                printf(" ");
+         /////////////////////////   }
+            else{
+            printf("%d", f);
+        }
+    }
+
+        printf("\n Please enter the rotation's key\n");
         scanf("%d", &d);
         printf("you've selected %d\n", d);
 }
