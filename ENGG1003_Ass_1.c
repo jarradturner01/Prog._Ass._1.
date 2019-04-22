@@ -47,44 +47,43 @@ switch (x){
         {
             printf("You've selected %d as your key\n", k);
         
-     
-       // for(a = 0; a <= 20; a++){
-         //   i[a] = 0;
-           // b = a - 65;
-            //printf("%c = %d\n", a, b);
-        
-            //printf("%c = %d\n", i, f);
-        input = fopen("input.txt", "r");
-        for(feof(input)==0; n <= 12; n++)
-            {
+    
+    input = fopen("input.txt", "r");
+        for(feof(input)==0; n <= 25; n++)    
+            {                                //ENSURE THAT THE INPUT FILE ENDS WITH A SPACE!                          
              fscanf(input, "%c", &c);
               if (n == 32){
-                printf(" \n");
+                printf(" ");
                 }
               else if (v != c){
                 v = c;
-                 if (v == 32){
-                   printf(" \n");
-                   }
-                   else{
+                 if (v == 32)
+                  {
+                   printf(" ");
+                  }
+                 else{
                    g = c;   
                    v = c - 65;
-                   printf("%c = %d\n", c, v);
+                   //printf("%c = %d\n", c, v);
                    }
                 }
-     ///////////////////////////////////
     
-    // if (e == 19){     //instead of 32, 19 appears to be the new value for "space" when encrypting rotation cypher 
+     if (v == 32){
+         //v = 0;
+         //e = 0;
+         printf("\n");
+ }
+ else{
         if (k > 0)
         {
-            if ( 0 <= (v + k) <= 25 )
+          if ( 0 <= (v + k) <= 25 )
             {
-              e = k - v;
+             e = k - v;
                if ( e < 0)
                {
                 e = 26 + e;
                }
-            printf("%c = %d\n", c, e);
+             printf("%c = %d\n", c, e);
             }
         }
         else if (k < 0)
@@ -93,21 +92,16 @@ switch (x){
             {
              e = 25 + (v + k);
             }
+            
             else if ( (v + k) > 0)
             {
              e = 0 + (v + k) ;   
             }
-            //printf("%c = %d\n", c, e);
+         printf("%c = %d\n", c, e);
         }
-        //printf("%c = %d\n", c, e);
-        printf(" \n");
-        
-      //  }/////////////////////////////////////////////////
     }
-}
 
-
-        //}
+    }
 
      
     break;   
@@ -117,7 +111,7 @@ switch (x){
         printf("you've selected %d\n", d);
 }
 
-
+}
     
     
     
