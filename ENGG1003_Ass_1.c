@@ -6,11 +6,13 @@ int x;
 
 FILE *input;
 char c;
-int v, k, e, n;
+int v, k;
+int n; 
+int e;
 
 FILE *input2;
 int f;
-int d, y;
+int d, y, z;
 
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher\n");
@@ -81,9 +83,9 @@ switch (x){
                {
                 e = 26 + e;
                }
-             printf("%c = %d ", c, e);
-             printf("%d ", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
-            //e = e + 65;
+             //printf("%c = %d ", c, e);
+             //printf("%d ", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
+            e = e + 65;
             printf("%c", e);                            //PRINT NEW CHARS
             }
         }
@@ -98,9 +100,9 @@ switch (x){
             {
              e = 0 + (v + k) ;   
             }
-         printf("%c = %d ", c, e);
-         printf("%d ", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
-        // e = e + 65;
+         //printf("%c = %d ", c, e);
+         //printf("%d ", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
+         e = e + 65;
          printf("%c", e);                               //PRINT NEW CHARS
         }
     }
@@ -119,10 +121,21 @@ switch (x){
                 printf(" ");
             }
             else{
+                printf("%d ", f);
+                printf("\nPlease input 25 (key)\n");
+                scanf("%d", &d);
+                
+                z = (f - d);
+                if ( (f - d) < 0){
+                    z = 26 + (f - d);
+                    printf("%d\n", z);
+                }
+                
+                
                 y = f + 65;
-                printf("%c = %d\n", y, y);
+               // printf("%c = %d\n", y, y);
             }
-            
+            //printf("%d\n", f);
            
        }
        
