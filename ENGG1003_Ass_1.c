@@ -50,7 +50,8 @@ switch (x){
     
     input = fopen("input.txt", "r");
         for(feof(input)==0; n <= 25; n++)    
-            {                                //ENSURE THAT THE INPUT FILE ENDS WITH A SPACE!                          
+            {                                //ENSURE THAT THE INPUT FILE ENDS WITH A SPACE!
+                                             //"n" NEEDS TO BE MODIFIED TO HOWEVER LONG "INPUT" ITS WITH 1 SPACE
              fscanf(input, "%c", &c);
               if (n == 32){
                 printf(" ");
@@ -84,6 +85,7 @@ switch (x){
                 e = 26 + e;
                }
              printf("%c = %d\n", c, e);
+             //printf("%d", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
             }
         }
         else if (k < 0)
@@ -98,6 +100,7 @@ switch (x){
              e = 0 + (v + k) ;   
             }
          printf("%c = %d\n", c, e);
+         //printf("%d", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
         }
     }
 
