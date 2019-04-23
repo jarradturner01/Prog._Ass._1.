@@ -12,7 +12,8 @@ int e;
 
 FILE *input2;
 int f;
-int d, y, z;
+int d, z;
+int y;
 
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher\n");
@@ -61,12 +62,12 @@ switch (x){
                   {
                    printf(" ");
                   }
-                 else{
-                      
+                 else
+                  {                      
                    v = c - 65;
                    //printf("%c = %d\n", c, v);
-                   }
-                }
+                  }
+             }
     
      if (v == 32){
          //v = 0;
@@ -108,8 +109,6 @@ switch (x){
     }
 
     }
-
-     
     break;   
      case 2:
         
@@ -117,38 +116,34 @@ switch (x){
         printf("The following numbers will be decrypted:\n");
         while(feof(input) == 0){
             fscanf(input, "%d", &f);
-            if (f == 32){
-                printf(" ");
-            }
-            else{
-                printf("%d ", f);
-                printf("\nPlease input 25 (key)\n");
-                scanf("%d", &d);
+            printf("%d ", f);
+     
+       }
+        printf("\nPlease input 25 as your key\n");
+        scanf("%d", &d);
+        input = fopen("input2.txt", "r");
+            for(feof(input)==0;  z <= 10; z++)
+            {
+                fscanf(input,"%d", &f);
+                printf("%d   %d", f, d);
+               y = (f - d);
                 
-                z = (f - d);
-                if ( (f - d) < 0){
-                    z = 26 + (f - d);
-                    printf("%d\n", z);
+             if (y < 0){
+                    y = 26 + (f - d);
+                    printf("%d ", y);
                 }
                 
+                //print
                 
-                y = f + 65;
-               // printf("%c = %d\n", y, y);
             }
-            //printf("%d\n", f);
-           
-       }
+       
+        
+        
+        
        
 
-       // printf("\n Please enter the rotation's key\n");
-        //scanf("%d", &d);
-        //printf("you've selected %d\n", d);
 }
 
 }
-    
-    
-    
-
 return(0);
 }
