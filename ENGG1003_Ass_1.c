@@ -125,7 +125,7 @@ switch (x){
             printf("%d ", f);
      
        }
-        printf("\nPlease input 25 as your key\n");
+        printf("\nThe solution to the input is 25, otherwise\nPlease input a key\n");
         scanf("%d", &d);
         input = fopen("input2.txt", "r");
         z = 0;
@@ -137,6 +137,10 @@ switch (x){
                     y = 26 + (f - d);
                     printf("%d ", y);
                 }
+               else if (y > 25){
+                   y = 0 + ((f - d) - 25);
+                   printf("%d ", y);
+               }
                 
                 
             }
