@@ -46,9 +46,11 @@ switch (x){
         else if (-25 <= k <= 25)
         {
             printf("You've selected %d as your key\n", k);
-        
     
-    input = fopen("input.txt", "r");
+
+    
+   // input = fopen("input.txt", "r");
+   n = 0;
         for(feof(input)==0; n <= 15; n++)    
             {                                //ENSURE THAT THE INPUT FILE ENDS WITH A SPACE!
                                              //"n" NEEDS TO BE MODIFIED TO HOWEVER LONG "INPUT" ITS WITH 1 SPACE
@@ -65,7 +67,7 @@ switch (x){
                  else
                   {                      
                    v = c - 65;
-                   printf("%c = %d\n", c, v);
+                   //printf("%c = %d\n", c, v);
                   }
              }
     
@@ -85,10 +87,10 @@ switch (x){
                {
                 e = 26 + e;
                }
-             //printf("%c = %d ", c, e);
+             printf("%c = %d ", c, e);
              //printf("%d ", e);                        //PRINT INVIVDUAL WORDS, TAKING NEW LINE PER WORD
             e = e + 65;
-            printf("%c", e);                            //PRINT NEW CHARS
+            //printf("%c", e);                            //PRINT NEW CHARS
             }
         }
         else if (k < 0)
@@ -102,14 +104,15 @@ switch (x){
             {
              e = 0 + (v + k) ;   
             }
-         //printf("%c = %d ", c, e);
+         printf("%c = %d ", c, e);
          //printf("%d ", e);                            //PRINT INDIVIDUAL WORDS, TAKING NEW LINE PER WORD
          e = e + 65;
-         printf("%c", e);                               //PRINT NEW CHARS
+         //printf("%c", e);                               //PRINT NEW CHARS
         }
     }
     }
-    }
+}
+
     break;   
      case 2:
         
