@@ -65,15 +65,16 @@ switch (x){
                  else
                   {                      
                    v = c - 65;
-                   //printf("%c = %d\n", c, v);
+                   printf("%c = %d\n", c, v);
                   }
              }
     
-     if (v == 32){
+     if (v == 32)
+     {
          //v = 0;
          //e = 0;
          printf("\n");
- }
+     }
  else{
         if (k > 0)
         {
@@ -107,7 +108,7 @@ switch (x){
          printf("%c", e);                               //PRINT NEW CHARS
         }
     }
-
+    }
     }
     break;   
      case 2:
@@ -122,27 +123,25 @@ switch (x){
         printf("\nPlease input 25 as your key\n");
         scanf("%d", &d);
         input = fopen("input2.txt", "r");
-            for(feof(input)==0;  z <= 10; z++)
+        z = 0;
+            for(feof(input)==0;  z <= 11; z++)
             {
-                fscanf(input,"%d", &f);
-                printf("%d   %d", f, d);
+               fscanf(input,"%d", &f);
                y = (f - d);
-                
-             if (y < 0){
+               if (y < 0){
                     y = 26 + (f - d);
                     printf("%d ", y);
                 }
                 
-                //print
                 
             }
-       
+       printf("\n");
         
         
         
        
 
-}
+
 
 }
 return(0);
