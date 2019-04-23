@@ -54,7 +54,9 @@ switch (x){
         for(feof(input)==0; n <= 15; n++)    
             {                                //ENSURE THAT THE INPUT FILE ENDS WITH A SPACE!
                                              //"n" NEEDS TO BE MODIFIED TO HOWEVER LONG "INPUT" ITS WITH 1 SPACE
-             fscanf(input, "%c", &c);
+             fscanf(input,"%c", &c);
+             
+             
               if (n == 32){
                 printf(" ");
                 }                            //OKAY THESE PRINT VALUES DONT TAKE NEW LINES TO AVOID SPCAES IN RESULTS
@@ -75,7 +77,7 @@ switch (x){
      {
          //v = 0;
          //e = 0;
-         printf("\n");
+         printf(" ");  // \n
      }
  else{
         if (k > 0)
