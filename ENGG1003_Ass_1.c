@@ -16,7 +16,8 @@ int d, z;
 int y;
 
 
-printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher\n");
+printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher");
+printf("\n3) encryption with substitution\n4) decryption with substitution\n");
 
 scanf("%d", &x);
 
@@ -157,6 +158,7 @@ switch (x){
             printf("\n");
 break;
     case 3: 
+        printf("Hey\n");
     
     
 }
