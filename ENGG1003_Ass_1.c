@@ -11,7 +11,7 @@ int n;
 int e;
 
 FILE *input2;
-int f;
+int f, h;
 int d, z;
 int y;
 
@@ -122,9 +122,15 @@ switch (x){
         printf("The following numbers will be decrypted:\n");
         while(feof(input) == 0){
             fscanf(input, "%d", &f);
-            printf("%d ", f);
-     
-       }
+            if (h == f ){
+                printf(" ");
+            }
+            else {
+                printf("%d ", f);
+            h = f;
+            }
+        }
+
         printf("\nThe solution to the input is 25, otherwise\nPlease input a key\n");
         scanf("%d", &d);
         input = fopen("input2.txt", "r");
@@ -132,26 +138,27 @@ switch (x){
             for(feof(input)==0;  z <= 11; z++)
             {
                fscanf(input,"%d", &f);
-               y = (f - d);
-               if (y < 0){
-                    y = 26 + (f - d);
-                    printf("%d ", y);
-                }
-               else if (y > 25){
-                   y = 0 + ((f - d) - 25);
-                   printf("%d ", y);
+               //y = (f - d);
+               f = 65 + f;
+               if (d < 0){
+                   y = f - d;
+                   if (y >= 26){
+                       y = 0 + y;
+                   }
                }
-                
-                
+               else if (d >= 0){
+                   y = f - d;
+                   if (y < 0){
+                       y = 26 + y;
+                   }
+               }
+               
+               printf("%c = %d ", y, y);
+               /////
+              
             }
        printf("\n");
-        
-        
-        
-       
-
-
-
+ 
 }
 return(0);
 }
