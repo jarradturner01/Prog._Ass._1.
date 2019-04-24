@@ -140,31 +140,25 @@ switch (x){
              if (d > 0){
                   y = f - d;
                   if (y < 0){
-                           y = 0 - (y);
+                    y = 0 - (y);
                     //printf("%d ", y);
                   }
-         //This remaining part will need to be tested/manipulated.
-                     else{
-                         if (y < 0){
-                             y = 0 - (y);
-                         }
-                         else if (y > 25){
-                             y = y - 25;
-                         }
-                         printf("%d ", y);
-                     }
+             }
+             else if (d < 0){
+                 y = f - d;
+                 if (y >= 25){
+                     y = 0 + (y - 25);
+                 }
+             }
             y = y + 65;
             //printf("%c = %d ", y, y);
             printf("%c ", y);
             }
-      
-
-      
-
-
-            }
-       printf("\n");
- 
+            printf("\n");
+break;
+    case 3: 
+    
+    
 }
 return(0);
 }
