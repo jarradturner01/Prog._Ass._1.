@@ -130,35 +130,36 @@ switch (x){
             h = f;
             }
         }
-
         printf("\nThe solution to the input is 25, otherwise\nPlease input a key\n");
         scanf("%d", &d);
         input = fopen("input2.txt", "r");
         z = 0;
             for(feof(input)==0;  z <= 11; z++)
             {
-               fscanf(input,"%d", &f);
-               //y = (f - d);
-               //f = 65 + f;                     // Okay so the if statements need to be played with... 
-               //////////////
-               if (d > 0){
+             fscanf(input,"%d", &f);
+             if (d > 0){
                   y = f - d;
                      if (0 <= y <= 25){
-                       //y = 0 + y;
-                       printf("%d ", y);
+                       y = -1 * y;
+                       //printf("%d ", y);
                      }
                      else{
                          if (y < 0){
-                             y = 0 - y;
+                             y = 0 - (y);
                          }
                          else if (y > 25){
                              y = y - 25;
                          }
-                         printf("%d", y);
+                         printf("%d ", y);
                      }
-                    
-          
-          }
+            y = y + 65;
+            //printf("%c = %d ", y, y);
+            printf("%c ", y);
+            }
+      
+
+      
+
 
             }
        printf("\n");
