@@ -85,7 +85,7 @@ switch (x){
           if ( 0 <= (v + k) <= 25 )
             {
              e = k - v;
-               if ( e < 0)
+               if (e < 0)
                {
                 e = 26 + e;
                }
@@ -141,25 +141,23 @@ switch (x){
                //y = (f - d);
                //f = 65 + f;                     // Okay so the if statements need to be played with... 
                //////////////
-               if (d < 0){
-                   if (0<= (f - d) <= 25){
-                     y = f - d;
+               if (d > 0){
+                   if (0 <= (f - d) <= 25){
+                     y = d + f;
                      if (y >= 25){
                        y = 0 + y;
                      }
-                   y = y + 65;  
-                   printf("%c = %d ", y, y);
+                     y = y + 65;  
+                     printf("%c = %d ", y, y);
+                   }
+                   else if ((f - d) < 0){
+                       y = 26 + (f - d);
+                       y = y + 65;
+                       printf("%c = %d", y, y);
                    }
 
                }
-               else if (d > 0){
-                   y = f - d;
-                   if (y < 0){
-                       y = 26 + y;
-                   }
-               }
-               y = y + 65;
-               printf("%c = %d ", y, y);
+              
                
               
             }
