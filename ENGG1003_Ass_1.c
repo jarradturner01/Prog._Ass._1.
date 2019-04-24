@@ -139,11 +139,11 @@ switch (x){
              fscanf(input,"%d", &f);
              if (d > 0){
                   y = f - d;
-                     if (0 <= y <= 25){
-                       y = -1 * y;
-                       //printf("%d ", y);
-                     }
-                                                                //This remaining part will need to be tested/manipulated.
+                  if (y < 0){
+                           y = 0 - (y);
+                    //printf("%d ", y);
+                  }
+         //This remaining part will need to be tested/manipulated.
                      else{
                          if (y < 0){
                              y = 0 - (y);
