@@ -140,11 +140,17 @@ switch (x){
                fscanf(input,"%d", &f);
                //y = (f - d);
                //f = 65 + f;                     // Okay so the if statements need to be played with... 
+               //////////////
                if (d < 0){
-                   y = f - d;
-                   if (y > 26){
+                   if (0<= (f - d) <= 25){
+                     y = f - d;
+                     if (y >= 25){
                        y = 0 + y;
+                     }
+                   y = y + 65;  
+                   printf("%c = %d ", y, y);
                    }
+
                }
                else if (d > 0){
                    y = f - d;
@@ -154,7 +160,7 @@ switch (x){
                }
                y = y + 65;
                printf("%c = %d ", y, y);
-               /////
+               
               
             }
        printf("\n");
