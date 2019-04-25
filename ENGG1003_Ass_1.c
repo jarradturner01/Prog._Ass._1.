@@ -80,7 +80,7 @@ switch (x){                                                //Start of "switch"
          //e = 0;
          printf("\n");  // \n                   //"if" statement to account for spaces created when int v is 32 (space), this also
      }                                          //causes the program to drop to a new line per space in the message
- else{
+     else{
         if (k > 0)                              //Using a "v" and positive "k" to perform a rotation, with following "if" statements
         {                                       //to continue a "chain" like behaviour when "e" exceeds the limits of "c" (0 to 25)
           if ( 0 <= (v + k) <= 25 )              
@@ -110,12 +110,12 @@ switch (x){                                                //Start of "switch"
          //printf("%c = %d ", c, e);            //Other print to allow user to see what each char "c"'s new equivalent integer (e) is
          //printf("%d ", e);                    //Other print to allow user to see integer (e)
          e = e + 65;
-         printf("%c", e);                               //PRINT NEW CHARS
+         printf("%c", e);                              
         }
     }
     
-    }
-}
+            }
+        }
 
 
 
