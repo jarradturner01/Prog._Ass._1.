@@ -54,7 +54,7 @@ switch (x){                                                //Start of "switch", 
    
    input = fopen("input.txt", "r");                                 //Opening and reading input
    n = 0;
-        for(feof(input)==0; n <= 15; n++)       //"for" loop to run iterations of the file, carrying out encrption per interation (int n) 
+        for(feof(input)==0; n <= 15; n++)       //"for" loop to run iterations of the input, carrying out encrption per interation (int n) 
             {                                   //Ensure that the input file ends with a "space" and "n" is as however long as input, with +1 space
              fscanf(input,"%c", &c);            //Reading an individual input per iteration
 
@@ -135,28 +135,38 @@ break;                                          //END OF CASE 1//
             }
         }
         printf("\nThe solution to the input is 25, otherwise\nPlease input a key\n");
-        scanf("%d", &d);                                   //Explaining 25 is the solution 
-        input = fopen("input2.txt", "r");
-        z = 0;
-            for(feof(input)==0;  z <= 20; z++)
+        scanf("%d", &d);                                   //Explaining 25 is the solution to input2 values (f), most other keys will work
+                                                           //cause a rotation- however will not produce the correct message from input
+        if (d < -25){                                      //Following "if/else if" statements to ensure key is within boundaries, if so
+            printf("Key error\n");                         //the program displays the error and stops
+        }
+        else if (d == 0){
+            printf("Key error\n");
+        }
+        else if (d > 25){
+            printf("Key error\n");
+        }
+        else{                                              //Once "d" is adequate, input2 is opened then read over iterations
+        input = fopen("input2.txt", "r");                  //"if/else if" statements set to pick up spaces (32) in "f" and to 
+        z = 0;                                             //prevent the last "f" from being used and displayed as result (y)
+            for(feof(input)==0;  z <= 20; z++)             //"for" loop use to perform iterations of input2 
             {
-             fscanf(input,"%d", &f);
+             fscanf(input,"%d", &f);                       //Reading individual values for "f" from input2 per iteration
 
              if (f == 32){
+                 printf(" ");                              //Recognised spaces (32) result in a blank space
+             }
+             else if (w == f){                             //Recognise end of input2 
                  printf(" ");
              }
-             else if (w == f){
-                 printf(" ");
-             }
-             else{
-                if (d > 0){
-                 y = f - d;
+             else{                                         //Coincide when "f" meets requirements
+                if (d > 0){                                //Following "if/else if" statements to recognise "d" as positive or negative
+                 y = f - d;                                //and to also take action when the results (y) boundaries are exceeded (0 to 25)
                     if (y < 0){
                       y = 0 - (y);
-                        //printf("%d ", y);
-                        //w = f;
-                        //y = y + 65;
-                        //printf("%c = %d ", y, y);
+                        //printf("%d ", y);                //Other print to display "y", "f"'s new value
+                        //y = y + 65;                      //Equation to allow "y" to align with appropriate character (ascii code)
+                        //printf("%c = %d ", y, y)         //Other print to display both "y"'s character and integer value
                     }
                 }
                 else if (d < 0){
@@ -172,6 +182,8 @@ break;                                          //END OF CASE 1//
                 }
             }
             printf("\n");
+        }
+
 break;
     case 3:
     printf("Okay welcome to the twilight zone\n");
