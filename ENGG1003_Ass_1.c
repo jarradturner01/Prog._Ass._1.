@@ -1,64 +1,62 @@
 #include <stdio.h>
 
-
-
 int main(){
-//variables in switch
-int x;
+                                //variable for switch
+int x;                             
  
-
-FILE *input, *output;
+                                //variables for case 1
+FILE *input;
 char c;
 int v, k;
 int n; 
 int e;
-
+                                //variables for case 2
 FILE *input2;
 int f, h;
 int d, z;
 int y, w;
 
 //case 3
-int s
+int s;
 
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher");
 printf("\n3) encryption with substitution\n4) decryption with substitution\n");
-
+                                                    //Printing the users options to screen, taking a new line per option.
 scanf("%d", &x);
-
-switch (x){
+                                                    //Scanning users input (int x) 
+switch (x){                                         //Start of "switch"
     case 1: 
-        input = fopen("input.txt", "r");
+        input = fopen("input.txt", "r");                   //Opening and reading input file and notifying the user what the message to be encrpted is
         printf("The following text will be encryted:\n");
-        while(feof(input) == 0) {
-            fscanf(input, "%c", &c);
-            printf("%c", c);
+        while(feof(input) == 0) {                          //Using a while loop to access the file until finished
+            fscanf(input, "%c", &c);                       //The reading individual charcters of input (char c)
+            printf("%c", c);                               //Printing the characters to reproduce the message in the terminal
         }
-
         printf("\nPlease input key to perform encrytion\n");
-        scanf("%d", &k);       
-        if (k == 0)
-        {
-            printf("Oh, so you're trying to trick me are you?\n");
+        scanf("%d", &k);
+                                                                    //Print to ask for and read user's inputed key (k)
+        if (k == 0)                                                 //Following if/if else statements determined by key (k)
+        {                                                           //Whether "k" is 0 or exceeds the key limits determines outcome
+            printf("Oh, so you're trying to trick me are you?\n");  //"if" k is equal to 0, print error
         }
         else if (k < -25)
         {
-            printf("Oh, so you think boundaries don't matter?\n");
+            printf("Oh, so you think boundaries don't matter?\n");  //"if" k is less than -25, print error, stop
         }
         else if (k > 25)
         {
-            printf("Oh, so you think boundaries don't matter?\n");
+            printf("Oh, so you think boundaries don't matter?\n");  //"if" k is greater than 25, print error, stop
         }
         else if (-25 <= k <= 25)
         {
-            printf("You've selected %d as your key\n", k);
+            printf("You've selected %d as your key\n", k);          //"if" k is lies between -25 and 25, print selected key and continue
    
-   input = fopen("input.txt", "r");
+   input = fopen("input.txt", "r");             ////////////////////////////
    n = 0;
         for(feof(input)==0; n <= 15; n++)    
             {                                //ENSURE THAT THE INPUT FILE ENDS WITH A SPACE!
-                                             //"n" NEEDS TO BE MODIFIED TO HOWEVER LONG "INPUT" ITS WITH 1 SPACE
+                                             //"n" NEEDS TO BE MODIFIED TO HOWEVER LONG "INPUT" IS, WITH +1 SPACE
              fscanf(input,"%c", &c);
 
               if (n == 32){
