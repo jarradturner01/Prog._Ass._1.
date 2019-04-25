@@ -123,19 +123,19 @@ break;                                          //END OF CASE 1//
         printf("The following numbers will be decrypted:\n");       //Dsiplaying to the user that the folloing printed text will be decrypted
         while(feof(input) == 0){
             fscanf(input, "%d", &f);                                //Reading "f" from input2
-            if (h == f ){
-                printf(" ");
-            }
+            if (h == f ){                                           //"if/else if" statement, "h" is in stop the program from printing an extra 
+                printf(" ");                                        //value (int f). This does prevent double lettered words from working correctly! 
+            }                                                     
             else if (f == 32){
                 printf(" ");
             }
             else {
-                printf("%d ", f);
+                printf("%d ", f);                                   //Printing resulting value (int f) from input
             h = f;
             }
         }
         printf("\nThe solution to the input is 25, otherwise\nPlease input a key\n");
-        scanf("%d", &d);
+        scanf("%d", &d);                                   //Explaining 25 is the solution 
         input = fopen("input2.txt", "r");
         z = 0;
             for(feof(input)==0;  z <= 20; z++)
