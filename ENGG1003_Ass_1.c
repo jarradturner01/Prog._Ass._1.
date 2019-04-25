@@ -25,8 +25,8 @@ printf("\n3) encryption with substitution\n4) decryption with substitution\n");
                                                            //Printing the users options to screen, taking a new line per option.
 scanf("%d", &x);
                                                            //Scanning users input (int x) 
-switch (x){                                                //Start of "switch"
-    case 1: 
+switch (x){                                                //Start of "switch", "x" is used to determine which case (corresponding to equivalent
+    case 1:                                                //user inputed value) e.g. 1 ==> case 1:
         input = fopen("input.txt", "r");                   //Opening and reading input file and notifying the user what the message to be encrpted is
         printf("The following text will be encryted:\n");
         while(feof(input) == 0) {                          //Using a while loop to access the file until finished
@@ -116,16 +116,13 @@ switch (x){                                                //Start of "switch"
     
             }
         }
-
-
-
-break;
-    case 2: 
+break;                                          //END OF CASE 1//
+    case 2:                                                         //User input option 2 (int x)
         
-        input = fopen("input2.txt", "r");
-        printf("The following numbers will be decrypted:\n");
+        input = fopen("input2.txt", "r");                           //Opening and reading input2 file and printing a blank space (f == 32)
+        printf("The following numbers will be decrypted:\n");       //Dsiplaying to the user that the folloing printed text will be decrypted
         while(feof(input) == 0){
-            fscanf(input, "%d", &f);
+            fscanf(input, "%d", &f);                                //Reading "f" from input2
             if (h == f ){
                 printf(" ");
             }
