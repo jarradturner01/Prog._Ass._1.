@@ -14,7 +14,7 @@ int e;
 FILE *input2;
 int f, h;
 int d, z;
-int y;
+int y, w;
 
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher");
@@ -146,24 +146,22 @@ switch (x){
                  printf(" ");
              }
              else{
-             printf("%d ", f);
-             if (d > 0){
-                  y = f - d;
-                  if (y < 0){
-                    y = 0 - (y);
-                    //printf("%d ", y);
-                  }
-             }
-             else if (d < 0){
+                if (d > 0){
                  y = f - d;
-                 if (y >= 25){
-                     y = 0 + (y - 25);
-                 }
-         }
+                    if (y < 0){
+                      y = 0 - (y);
+                        //printf("%d ", y);
+                    }
+                }
+                else if (d < 0){
+                    y = f - d;
+                    if (y >= 25){
+                        y = 0 + (y - 25);
+                    }
+                }
+            }
 
-         }
-
-         }
+         
 
             
             
@@ -171,8 +169,9 @@ switch (x){
 
             y = y + 65;
             //printf("%c = %d ", y, y);
-            printf("%c", y);              ////////////////////
-            
+            printf("%c", y); 
+        }          
+
             printf("\n");
         
 
