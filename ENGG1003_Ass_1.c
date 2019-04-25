@@ -139,10 +139,14 @@ switch (x){
         scanf("%d", &d);
         input = fopen("input2.txt", "r");
         z = 0;
-            for(feof(input)==0;  z <= 15; z++)
+            for(feof(input)==0;  z <= 20; z++)
             {
              fscanf(input,"%d", &f);
+
              if (f == 32){
+                 printf(" ");
+             }
+             else if (w == f){
                  printf(" ");
              }
              else{
@@ -151,6 +155,9 @@ switch (x){
                     if (y < 0){
                       y = 0 - (y);
                         //printf("%d ", y);
+                        //w = f;
+                        //y = y + 65;
+                        //printf("%c = %d ", y, y);
                     }
                 }
                 else if (d < 0){
@@ -159,19 +166,12 @@ switch (x){
                         y = 0 + (y - 25);
                     }
                 }
+                w = f;
+                y = y + 65;
+                //printf("%c = %d ", y, y);
+                printf("%c", y); 
+                }
             }
-
-         
-
-            
-            
-            
-
-            y = y + 65;
-            //printf("%c = %d ", y, y);
-            printf("%c", y); 
-        }          
-
             printf("\n");
         
 
