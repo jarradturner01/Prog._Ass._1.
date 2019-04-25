@@ -4,7 +4,8 @@ int main(){
 //variables in switch
 int x; 
 
-FILE *input;
+FILE *input, *output;
+
 char c;
 int v, k;
 int n; 
@@ -126,6 +127,9 @@ switch (x){
             if (h == f ){
                 printf(" ");
             }
+            else if (f == 32){
+                printf(" ");
+            }
             else {
                 printf("%d ", f);
             h = f;
@@ -135,9 +139,11 @@ switch (x){
         scanf("%d", &d);
         input = fopen("input2.txt", "r");
         z = 0;
-            for(feof(input)==0;  z <= 11; z++)
+            for(feof(input)==0;  z <= 15; z++)
             {
              fscanf(input,"%d", &f);
+            }
+            //printf("%d", f);
              if (d > 0){
                   y = f - d;
                   if (y < 0){
@@ -150,17 +156,24 @@ switch (x){
                  if (y >= 25){
                      y = 0 + (y - 25);
                  }
-             }
+             }  
+            
+            
+            
+
             y = y + 65;
             //printf("%c = %d ", y, y);
-            printf("%c ", y);
-            }
+            printf("%c", y);              ////////////////////
+            
             printf("\n");
+        
+
 break;
     case 3: 
         printf("Hey\n");
     
     
 }
+
 return(0);
 }
