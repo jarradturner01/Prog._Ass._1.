@@ -1,11 +1,13 @@
 #include <stdio.h>
 
+
+
 int main(){
 //variables in switch
-int x; 
+int x;
+ 
 
 FILE *input, *output;
-
 char c;
 int v, k;
 int n; 
@@ -16,6 +18,9 @@ int f, h;
 int d, z;
 int y, w;
 
+//case 3
+int s
+
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher");
 printf("\n3) encryption with substitution\n4) decryption with substitution\n");
@@ -23,14 +28,14 @@ printf("\n3) encryption with substitution\n4) decryption with substitution\n");
 scanf("%d", &x);
 
 switch (x){
-    case 1:  
-    
+    case 1: 
         input = fopen("input.txt", "r");
         printf("The following text will be encryted:\n");
         while(feof(input) == 0) {
             fscanf(input, "%c", &c);
             printf("%c", c);
         }
+
         printf("\nPlease input key to perform encrytion\n");
         scanf("%d", &k);       
         if (k == 0)
@@ -48,17 +53,14 @@ switch (x){
         else if (-25 <= k <= 25)
         {
             printf("You've selected %d as your key\n", k);
-    
-
-    
-  input = fopen("input.txt", "r");
+   
+   input = fopen("input.txt", "r");
    n = 0;
         for(feof(input)==0; n <= 15; n++)    
             {                                //ENSURE THAT THE INPUT FILE ENDS WITH A SPACE!
                                              //"n" NEEDS TO BE MODIFIED TO HOWEVER LONG "INPUT" ITS WITH 1 SPACE
              fscanf(input,"%c", &c);
-            
-             
+
               if (n == 32){
                 printf(" ");
                 }                            //OKAY THESE PRINT VALUES DONT TAKE NEW LINES TO AVOID SPCAES IN RESULTS
@@ -114,11 +116,14 @@ switch (x){
          printf("%c", e);                               //PRINT NEW CHARS
         }
     }
+    
     }
 }
 
-    break;   
-     case 2:
+
+
+break;
+    case 2: 
         
         input = fopen("input2.txt", "r");
         printf("The following numbers will be decrypted:\n");
@@ -173,14 +178,14 @@ switch (x){
                 }
             }
             printf("\n");
+break;
+    case 3:
+    printf("Okay welcome to the twilight zone\n");
+        
+        }
+        return(0);
+    }
+
+
         
 
-break;
-    case 3: 
-        printf("Hey\n");
-    
-    
-}
-
-return(0);
-}
