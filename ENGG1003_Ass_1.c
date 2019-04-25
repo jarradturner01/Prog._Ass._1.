@@ -160,7 +160,7 @@ break;                                          //END OF CASE 1//
                  printf(" ");
              }
              else{                                         //Coincide when "f" meets requirements
-                if (d > 0){                                //Following "if/else if" statements to recognise "d" as positive or negative
+                if (d > 0){                                //Following "if" statements to recognise "d" as positive 
                  y = f - d;                                //and to also take action when the results (y) boundaries are exceeded (0 to 25)
                     if (y < 0){
                       y = 0 - (y);
@@ -169,22 +169,22 @@ break;                                          //END OF CASE 1//
                         //printf("%c = %d ", y, y)         //Other print to display both "y"'s character and integer value
                     }
                 }
-                else if (d < 0){
+                else if (d < 0){                           //Following "else if/if" statements to recognise "d" as negative
                     y = f - d;
                     if (y >= 25){
                         y = 0 + (y - 25);
                     }
                 }
                 w = f;
-                y = y + 65;
-                //printf("%c = %d ", y, y);
-                printf("%c", y); 
+                y = y + 65;                                //Equation to allow "y" to align with appropriate character (ascii code)
+                //printf("%c = %d ", y, y);                //Other print to display both "y"'s character and integer value
+                printf("%c", y);                           //Printing character (y) i.e. decrypted message
                 }
             }
-            printf("\n");
+            printf("\n");                                  //Tidy finish, taking new line after message (y) is displayed 
         }
 
-break;
+ break;                                         //END OF CASE 2//
     case 3:
     printf("Okay welcome to the twilight zone\n");
         
