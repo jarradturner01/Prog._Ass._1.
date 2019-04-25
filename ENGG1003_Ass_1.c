@@ -142,8 +142,11 @@ switch (x){
             for(feof(input)==0;  z <= 15; z++)
             {
              fscanf(input,"%d", &f);
-            }
-            //printf("%d", f);
+             if (f == 32){
+                 printf(" ");
+             }
+             else{
+             printf("%d ", f);
              if (d > 0){
                   y = f - d;
                   if (y < 0){
@@ -156,7 +159,12 @@ switch (x){
                  if (y >= 25){
                      y = 0 + (y - 25);
                  }
-             }  
+         }
+
+         }
+
+         }
+
             
             
             
