@@ -24,7 +24,8 @@ char s;
 
 FILE *input4;
 char j;
-int r, q;
+char r;
+int q, u;
 
 
 
@@ -207,6 +208,14 @@ input = fopen("input3.txt", "r");
 a = 0;
 for (feof(input)==0; a<= 30; a++){
     fscanf(input, "%c", &s);
+    
+    if(s % 2 == 0){
+        s = s + 2;
+    }
+    else if(s % 2 != 0){
+        s = s + 2;
+    }
+    
     if(s == 67){
         s = 65;
     }
@@ -289,17 +298,36 @@ for (feof(input)==0; a<= 30; a++){
 printf("\n");
 break;
     case 4:
-    printf("The following message will be decrypted:\n");
-    input = fopen("input4.txt", "r");
-    while(feof(input)== 0){
-        fscanf(input, "%c", &j);
-        printf("%c", j);
-    }
+    
     printf("\nThe decryption resulted with:\n");
+    input = fopen("input3.txt", "r");
+    for(feof(input) == 0; r <= 20; r++){
+        fscanf(input, "%c", &r);
+        
+        if(r % 2 == 0){
+            r = r + 2;
+            
+            if (q == r){
+                r = r - 2;
+            }
+            q = r;
+        printf("%c = %d", r, r);
+        }
+        else if(r % 2 != 0){
+            u = r + 2;
+            
+            if(q == u){
+                u = r - 2;
+            }
+            q = u;
+        printf("%c = %d", r, u);
+        }
+        
+    }
     
     
     
-    printf("dopeAsFuck\n");
+    
     
 
 
