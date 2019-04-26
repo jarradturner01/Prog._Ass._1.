@@ -13,7 +13,8 @@ int n;
 int e;
                                 //variables for case 2
 FILE *input2;
-int f, h;
+char f;
+int h;
 int d, z;
 int y, w;
 
@@ -126,7 +127,7 @@ break;                                          //END OF CASE 1//
         input = fopen("input2.txt", "r");                           //Opening and reading input2 file and printing a blank space (f == 32)
         printf("The following numbers will be decrypted:\n");       //Dsiplaying to the user that the folloing printed text will be decrypted
         while(feof(input) == 0){
-            fscanf(input, "%d", &f);                                //Reading "f" from input2
+            fscanf(input, "%c", &f);                                //Reading "f" from input2
             if (h == f ){                                           //"if/else if" statement, "h" is in stop the program from printing an extra 
                 printf(" ");                                        //value (int f). This does prevent double lettered words from working correctly! 
             }                                                     
@@ -134,7 +135,7 @@ break;                                          //END OF CASE 1//
                 printf(" ");
             }
             else {
-                printf("%d ", f);                                   //Printing resulting value (int f) from input
+                printf("%c ", f);                                   //Printing resulting value (int f) from input
             h = f;
             }
         }
@@ -155,7 +156,7 @@ break;                                          //END OF CASE 1//
         z = 0;                                             //prevent the last "f" from being used and displayed as result (y)
             for(feof(input)==0;  z <= 20; z++)             //"for" loop use to perform iterations of input2 
             {
-             fscanf(input,"%d", &f);                       //Reading individual values for "f" from input2 per iteration
+             fscanf(input,"%c", &f);                       //Reading individual values for "f" from input2 per iteration
 
              if (f == 32){
                  printf(" ");                              //Recognised spaces (32) result in a blank space
@@ -164,6 +165,7 @@ break;                                          //END OF CASE 1//
                  printf(" ");
              }
              else{                                         //Coincide when "f" meets requirements
+                f = f - 65;
                 if (d > 0){                                //Following "if" statements to recognise "d" as positive 
                  y = f - d;                                //and to also take action when the results (y) boundaries are exceeded (0 to 25)
                     if (y < 0){
@@ -197,7 +199,7 @@ fscanf(input, "%c", &s);
 //printf("%c = %d\n", s, s);
 printf("%c", s);
 }
-printf("\n");
+printf("\nThe encrypted result is:\n");
 input = fopen("input3.txt", "r");
 a = 0;
 for (feof(input)==0; a<= 30; a++){
@@ -282,6 +284,11 @@ for (feof(input)==0; a<= 30; a++){
     
 }
 printf("\n");
+break;
+    case 4:
+    printf("The following numerals will be decrypted\n");
+    printf("dopeAsFuck\n");
+    
 
 
 
