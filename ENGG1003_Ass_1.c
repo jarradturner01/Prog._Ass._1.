@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
                                 //variable for switch
@@ -19,7 +20,7 @@ int y, w;
 //case 3
 char i;
 int s;
-int a[i];
+int a;
 
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher");
@@ -191,10 +192,16 @@ break;                                          //END OF CASE 1//
     printf("Okay welcome to the twilight zone\n");
     
     for(i = 65; i <= 90; i++){
-        a[i]= i;
-        s = a[i];
+       
+        s = rand()%(25 +1);
+        s != a;
+        a = s;
+        
+         
+             
+        printf("%d ", s);  
         //printf("%c = %d\n", s, s);
-        printf("%c = %d\n", i, s);
+        printf("%c = %d\n", i, i);
     }
     
     
