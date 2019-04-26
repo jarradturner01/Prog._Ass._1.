@@ -18,8 +18,9 @@ int d, z;
 int y, w;
 
 //case 3
-int i, s, a;
+int i, a;
 int j;
+char s;
 
 
 
@@ -189,81 +190,106 @@ break;                                          //END OF CASE 1//
 
  break;                                         //END OF CASE 2//
     case 3:
-
-for(a = 65; a <= 90; a++){
-    s = 65;
-    j = rand()%(25 + 1);
-    printf("%d ", j);
-    if (65<= s <= 90){
-        //printf("%d   ", a);
-        s = s + j;
-        if (s > 90){
-            s = 65 + (s - 90);
-        }
-        else if(s < 65){
-            s = 90 - (65 - s);
-        }
-        printf("%c = %d\n", s, s);
+input = fopen("input3.txt", "r");
+printf("The following message will be encrypted:\n");
+while(feof(input)== 0){
+fscanf(input, "%c", &s);
+//printf("%c = %d\n", s, s);
+printf("%c", s);
+}
+printf("\n");
+input = fopen("input3.txt", "r");
+a = 0;
+for (feof(input)==0; a<= 30; a++){
+    fscanf(input, "%c", &s);
+    if(s == 67){
+        s = 65;
     }
-    s++;
-    //j = rand()%(26+1);
+    else if(s == 65){
+        s = 67;
+    }
+    else if(s == 66){
+        s = 68;
+    }
+    else if(s == 68){
+        s = 66;
+    }
+    else if(s == 71){
+        s = 69;
+    }
+    else if(s == 69){
+        s = 71;
+    }
+    else if(s == 70){
+        s = 72;
+    }
+    else if(s == 72){
+        s = 70;
+    }
+    else if(s == 73){
+        s = 75;
+    }
+    else if(s == 75){
+        s = 73;
+    }
+    else if(s == 74){
+        s = 76;
+    }
+    else if(s == 76){
+        s = 74;
+    }
+    else if(s == 77){
+        s = 79;
+    }
+    else if(s == 79){
+        s = 77;
+    }
+    else if(s == 80){
+        s = 82;
+    }
+    else if(s == 82){
+        s = 80;
+    }
+    else if(s == 81){
+        s = 83;
+    }
+    else if(s == 83){
+        s = 81;
+    }
+    else if(s == 84){
+        s = 86;
+    }
+    else if(s == 86){
+        s = 84;
+    }
+    else if(s == 85){
+        s = 87;
+    }
+    else if(s == 87){
+        s = 85;
+    }
+    else if(s == 88){
+        s = 89;
+    }
+    else if(s == 89){
+        s = 90;
+    }
+    else if(s == 90){
+        s = 88;
+    }
+    
+    printf("%c", s);
+    
+}
+printf("\n");
 
-    //printf("%c = %d\n", a, a);
-    //printf("%d ", s);
+
+
+
 
 }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    printf("Okay welcome to the twilight zone\n");
-    //j = 0;
-    //while(j != 25){
-    
-    //s = rand()%(25 + 1);
-    //if (s == l){
-    //    s = rand()%(24+1);
-    //}
-   // l = s;
-   // j++;
-    //printf("%d ", s);
-   // }
-
-    //printf("random number is %d\n", s);
-    //for(i = 65; i <= 90; i++){
-        //printf("%c = %d\n", i, i);
-      //  a = i;
-      //  a = s + a;
-       // if(a > 90){
-        //    a = 65 + (a - 90);
-       // }
-        //else if(a < 65){
-        //    a = 90 - (65 - a);
-       // }
-       // printf("%c = %d\n", i, a);      
-        
-         
-             
-        //printf("%d ", s);  
-        //printf("%c = %d\n", s, s);
-        //printf("%c = %d\n", i, i);
-    }
-    
-    
-    //Get the 65 to 90, then minus 65 to 0-25
-    //Set up a "random" to generate/mix these 0 to 25, with each number only possible to occur once
-    //see if these randomly generated numbers change each time...
-    //hopefully if they do get it to occur each time then at 65 to them to print random
-        
-        return(0);
-    }
+    return(0);
+}
 
 
         
