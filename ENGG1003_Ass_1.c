@@ -187,7 +187,10 @@ break;                                          //END OF CASE 1//
  break;                                         //END OF CASE 2//
     case 3:
     printf("Okay welcome to the twilight zone\n");
-        
+    //Get the 65 to 90, then minus 65 to 0-25
+    //Set up a "random" to generate/mix these 0 to 25, with each number only possible to occur once
+    //see if these randomly generated numbers change each time...
+    //hopefully if they do get it to occur each time then at 65 to them to print random
         }
         return(0);
     }
