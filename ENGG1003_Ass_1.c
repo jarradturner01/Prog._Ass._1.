@@ -38,15 +38,15 @@ switch (x){                                                //Start of "switch", 
                                                                     //Print to ask for and read user's inputed key (k)
         if (k == 0)                                                 //Following "if/if else" statements determined by key (k)
         {                                                           //Whether "k" is 0 or exceeds the key limits determines outcome
-            printf("Oh, so you're trying to trick me are you?\n");  //"if" k is equal to 0, print error
+            printf("Key error\n");                                  //"if" k is equal to 0, print error
         }
         else if (k < -25)
         {
-            printf("Oh, so you think boundaries don't matter?\n");  //"if" k is less than -25, print error, stop
+            printf("Key error\n");                                  //"if" k is less than -25, print error, stop
         }
         else if (k > 25)
         {
-            printf("Oh, so you think boundaries don't matter?\n");  //"if" k is greater than 25, print error, stop
+            printf("Key error\n");                                  //"if" k is greater than 25, print error, stop
         }
         else if (-25 <= k <= 25)
         {
