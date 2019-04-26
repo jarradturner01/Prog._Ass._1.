@@ -18,10 +18,13 @@ int h;
 int d, z;
 int y, w;
 
-//case 3
+FILE *input3;
 int i, a;
-int j;
 char s;
+
+FILE *input4;
+char j;
+int r, q;
 
 
 
@@ -286,7 +289,16 @@ for (feof(input)==0; a<= 30; a++){
 printf("\n");
 break;
     case 4:
-    printf("The following numerals will be decrypted\n");
+    printf("The following message will be decrypted:\n");
+    input = fopen("input4.txt", "r");
+    while(feof(input)== 0){
+        fscanf(input, "%c", &j);
+        printf("%c", j);
+    }
+    printf("\nThe decryption resulted with:\n");
+    
+    
+    
     printf("dopeAsFuck\n");
     
 
