@@ -17,7 +17,9 @@ int d, z;
 int y, w;
 
 //case 3
+char i;
 int s;
+int a[i];
 
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher");
@@ -187,6 +189,15 @@ break;                                          //END OF CASE 1//
  break;                                         //END OF CASE 2//
     case 3:
     printf("Okay welcome to the twilight zone\n");
+    
+    for(i = 65; i <= 90; i++){
+        a[i]= i;
+        s = a[i];
+        //printf("%c = %d\n", s, s);
+        printf("%c = %d\n", i, s);
+    }
+    
+    
     //Get the 65 to 90, then minus 65 to 0-25
     //Set up a "random" to generate/mix these 0 to 25, with each number only possible to occur once
     //see if these randomly generated numbers change each time...
