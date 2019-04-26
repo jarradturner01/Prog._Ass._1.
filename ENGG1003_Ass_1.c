@@ -18,9 +18,9 @@ int d, z;
 int y, w;
 
 //case 3
-char i;
-int s;
-int a;
+int i, s, a;
+int j;
+
 
 
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher");
@@ -189,19 +189,71 @@ break;                                          //END OF CASE 1//
 
  break;                                         //END OF CASE 2//
     case 3:
-    printf("Okay welcome to the twilight zone\n");
+
+for(a = 65; a <= 90; a++){
+    s = 65;
+    j = rand()%(25 + 1);
+    printf("%d ", j);
+    if (65<= s <= 90){
+        //printf("%d   ", a);
+        s = s + j;
+        if (s > 90){
+            s = 65 + (s - 90);
+        }
+        else if(s < 65){
+            s = 90 - (65 - s);
+        }
+        printf("%c = %d\n", s, s);
+    }
+    s++;
+    //j = rand()%(26+1);
+
+    //printf("%c = %d\n", a, a);
+    //printf("%d ", s);
+
+}
     
-    for(i = 65; i <= 90; i++){
-       
-        s = rand()%(25 +1);
-        s != a;
-        a = s;
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    printf("Okay welcome to the twilight zone\n");
+    //j = 0;
+    //while(j != 25){
+    
+    //s = rand()%(25 + 1);
+    //if (s == l){
+    //    s = rand()%(24+1);
+    //}
+   // l = s;
+   // j++;
+    //printf("%d ", s);
+   // }
+
+    //printf("random number is %d\n", s);
+    //for(i = 65; i <= 90; i++){
+        //printf("%c = %d\n", i, i);
+      //  a = i;
+      //  a = s + a;
+       // if(a > 90){
+        //    a = 65 + (a - 90);
+       // }
+        //else if(a < 65){
+        //    a = 90 - (65 - a);
+       // }
+       // printf("%c = %d\n", i, a);      
         
          
              
-        printf("%d ", s);  
+        //printf("%d ", s);  
         //printf("%c = %d\n", s, s);
-        printf("%c = %d\n", i, i);
+        //printf("%c = %d\n", i, i);
     }
     
     
@@ -209,7 +261,7 @@ break;                                          //END OF CASE 1//
     //Set up a "random" to generate/mix these 0 to 25, with each number only possible to occur once
     //see if these randomly generated numbers change each time...
     //hopefully if they do get it to occur each time then at 65 to them to print random
-        }
+        
         return(0);
     }
 
