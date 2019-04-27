@@ -252,9 +252,9 @@ for (feof(input)==0; a<= 30; a++){
         s = 77;
     }
     else if(s == 80){
-        s = 82;
+        s = 78;
     }
-    else if(s == 82){
+    else if(s == 78){
         s = 80;
     }
     else if(s == 81){
@@ -264,9 +264,9 @@ for (feof(input)==0; a<= 30; a++){
         s = 81;
     }
     else if(s == 84){
-        s = 86;
+        s = 82;
     }
-    else if(s == 86){
+    else if(s == 82){
         s = 84;
     }
     else if(s == 85){
@@ -276,13 +276,16 @@ for (feof(input)==0; a<= 30; a++){
         s = 85;
     }
     else if(s == 88){
+        s = 86;
+    }
+    else if(s == 86){
+        s = 88;
+    }
+    else if(s == 90){
         s = 89;
     }
     else if(s == 89){
         s = 90;
-    }
-    else if(s == 90){
-        s = 88;
     }
     
     printf("%c", s);
@@ -310,16 +313,16 @@ break;
         else if(r == 65){
             r = 67;
         }
-        else if(r == 66){
-            r = 68;
-        }
         else if(r == 68){
             r = 66;
         }
-        else if(r == 71){
-            r = 73;
+        else if(r == 66){
+            r = 68;
         }
-        else if(r== 73){
+        else if(r == 71){
+            r = 69;    
+        }
+        else if(r == 69){
             r = 71;
         }
         else if(r == 70){
@@ -328,11 +331,11 @@ break;
         else if(r == 72){
             r = 70;
         }
-        else if(r == 75){
-            r = 77;
-        }
-        else if(r == 77){
+        else if(r == 73){
             r = 75;
+        }
+        else if(r == 75){
+            r = 73;
         }
         else if(r == 74){
             r = 76;
@@ -349,7 +352,7 @@ break;
         else if(r == 78){
             r == 80;
         }
-        else if(r == 80){
+        else if(r == 80){    //SOMETHING IS WRONG WITH N AND P
             r = 78;
         }
         else if(r == 81){
@@ -371,7 +374,7 @@ break;
             r = 85;
         }
         else if(r == 88){
-            r = 89;
+            r = 86;
         }
         else if(r == 89){
             r = 90;
