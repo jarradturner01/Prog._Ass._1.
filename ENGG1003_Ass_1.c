@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void caseOne();
+void caseTwo();
+void caseThree();
+void caseFour();
+
 int main(){
                                 //variable for switch
 int x;                             
@@ -50,15 +55,17 @@ switch (x){                                                //Start of "switch", 
         break;
 }    
 
-return(0);
+return 0;
 }
 
-
-
-    
-
         
-void caseOne(){        
+void caseOne(){
+    FILE *input;
+    char c;
+    int v, k;
+    int n;
+    int e;
+    
         input = fopen("input.txt", "r");                   //Opening and reading input file and notifying the user what the message to be encrpted is
         printf("The following text will be encryted:\n");
         while(feof(input) == 0) {                          //Using a while loop to access the file until finished
@@ -148,14 +155,20 @@ void caseOne(){
     
             }
         }
-    return();
+    return;
     }
                                                         //User input option 2 (int x)
-void caseTwo();{        
-        input = fopen("input2.txt", "r");                           //Opening and reading input2 file and printing a blank space (f == 32)
+void caseTwo(){
+    FILE *input2;
+    char f;
+    int h;
+    int d, z;
+    int y, w;
+    
+        input2 = fopen("input2.txt", "r");                           //Opening and reading input2 file and printing a blank space (f == 32)
         printf("The following numbers will be decrypted:\n");       //Dsiplaying to the user that the folloing printed text will be decrypted
-        while(feof(input) == 0){
-            fscanf(input, "%c", &f);                                //Reading "f" from input2
+        while(feof(input2) == 0){
+            fscanf(input2, "%c", &f);                                //Reading "f" from input2
             if (h == f ){                                           //"if/else if" statement, "h" is in stop the program from printing an extra 
                 printf(" ");                                        //value (int f). This does prevent double lettered words from working correctly! 
             }                                                     
@@ -180,11 +193,11 @@ void caseTwo();{
             printf("Key error\n");
         }
         else{                                              //Once "d" is adequate, input2 is opened then read over iterations
-        input = fopen("input2.txt", "r");                  //"if/else if" statements set to pick up spaces (32) in "f" and to 
+        input2 = fopen("input2.txt", "r");                  //"if/else if" statements set to pick up spaces (32) in "f" and to 
         z = 0;                                             //prevent the last "f" from being used and displayed as result (y)
-            for(feof(input)==0;  z <= 20; z++)             //"for" loop use to perform iterations of input2 
+            for(feof(input2)==0;  z <= 20; z++)             //"for" loop use to perform iterations of input2 
             {
-             fscanf(input,"%c", &f);                       //Reading individual values for "f" from input2 per iteration
+             fscanf(input2,"%c", &f);                       //Reading individual values for "f" from input2 per iteration
 
              if (f == 32){
                  printf(" ");                              //Recognised spaces (32) result in a blank space
@@ -220,19 +233,23 @@ void caseTwo();{
         return;
 }
                                          //END OF CASE 2//
-void caseThree();{
-input = fopen("input3.txt", "r");
+void caseThree(){
+    FILE *input3;
+    int i, a;
+    char s;
+    
+input3 = fopen("input3.txt", "r");
 printf("The following message will be encrypted:\n");
-while(feof(input)== 0){
-fscanf(input, "%c", &s);
+while(feof(input3)== 0){
+fscanf(input3, "%c", &s);
 //printf("%c = %d\n", s, s);
 printf("%c", s);
 }
 printf("\nThe encrypted result is:\n");
-input = fopen("input3.txt", "r");
+input3 = fopen("input3.txt", "r");
 a = 0;
-for (feof(input)==0; a<= 30; a++){
-    fscanf(input, "%c", &s);
+for (feof(input3)==0; a<= 30; a++){
+    fscanf(input3, "%c", &s);
 
     if(s == 67){
         s = 65;
@@ -317,21 +334,24 @@ for (feof(input)==0; a<= 30; a++){
     
 }
 printf("\n");
-return();
+return;
 }
-void caseFour();{
+void caseFour(){
+    FILE *input4;
+    int j;
+    char r;
     //The deryption process will only decrypt whatever the text from case 3 encrypted 
     printf("\nThe decryption resulted with:\n");
-    input = fopen("input4.txt", "r");
-    while(feof(input)== 0){
-        fscanf(input, "%c", &r);
+    input4 = fopen("input4.txt", "r");
+    while(feof(input4)== 0){
+        fscanf(input4, "%c", &r);
         printf("%c", r);
     }
     printf("\n");
-    input = fopen("input4.txt", "r");
+    input4 = fopen("input4.txt", "r");
     j = 0;
-    for(feof(input) == 0; j <= 25; j++){
-        fscanf(input, "%c", &r);
+    for(feof(input4) == 0; j <= 25; j++){
+        fscanf(input4, "%c", &r);
         //printf("%c", r);
         if(r == 67){
             r = 65;
@@ -411,7 +431,7 @@ void caseFour();{
         printf("%c", r);
 }
 printf("\n");
-return();
+return;
 }
 
 
