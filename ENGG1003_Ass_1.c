@@ -294,7 +294,7 @@ for (feof(input)==0; a<= 30; a++){
 printf("\n");
 break;
     case 4:
-    
+    //The deryption process will only decrypt whatever the text from case 3 encrypted 
     printf("\nThe decryption resulted with:\n");
     input = fopen("input4.txt", "r");
     while(feof(input)== 0){
