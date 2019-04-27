@@ -208,9 +208,7 @@ input = fopen("input3.txt", "r");
 a = 0;
 for (feof(input)==0; a<= 30; a++){
     fscanf(input, "%c", &s);
-    
-    
-    
+
     if(s == 67){
         s = 65;
     }
@@ -303,15 +301,87 @@ break;
     printf("\n");
     input = fopen("input4.txt", "r");
     j = 0;
-    for(feof(input) == 0; j <= 20; j++){
+    for(feof(input) == 0; j <= 25; j++){
         fscanf(input, "%c", &r);
+        //printf("%c", r);
+        if(r == 67){
+            r = 65;
+        }
+        else if(r == 65){
+            r = 67;
+        }
+        else if(r == 66){
+            r = 68;
+        }
+        else if(r == 68){
+            r = 66;
+        }
+        else if(r == 71){
+            r = 73;
+        }
+        else if(r== 73){
+            r = 71;
+        }
+        else if(r == 70){
+            r =72;
+        }
+        else if(r == 72){
+            r = 70;
+        }
+        else if(r == 75){
+            r = 77;
+        }
+        else if(r == 77){
+            r = 75;
+        }
+        else if(r == 74){
+            r = 76;
+        }
+        else if(r == 76) {
+            r = 74;
+        }
+        else if(r == 77){
+            r = 79;
+        }
+        else if(r == 79){
+            r = 77;
+        }
+        else if(r == 78){
+            r == 80;
+        }
+        else if(r == 80){
+            r = 78;
+        }
+        else if(r == 81){
+            r = 83;
+        }
+        else if(r == 83){
+            r = 81;
+        }
+        else if(r == 82){
+            r = 84;
+        }
+        else if(r == 84){
+            r = 82;
+        }
+        else if(r == 85){
+            r = 87;
+        }
+        else if(r == 87){
+            r = 85;
+        }
+        else if(r == 88){
+            r = 89;
+        }
+        else if(r == 89){
+            r = 90;
+        }
+        else if( r == 90){
+            r = 88;
+        }
         printf("%c", r);
-   
-    
-    
-    
-    
 }
+printf("\n");
 }
 
     return(0);
