@@ -349,11 +349,11 @@ break;
         else if(r == 79){
             r = 77;
         }
-        else if(r == 78){
-            r == 80;
-        }
-        else if(r == 80){    //SOMETHING IS WRONG WITH N AND P
+        else if(r == 80){
             r = 78;
+        }
+        else if(r == 78){    //SOMETHING IS WRONG WITH N AND P
+            r = 80;
         }
         else if(r == 81){
             r = 83;
