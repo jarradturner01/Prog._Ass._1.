@@ -25,7 +25,7 @@ char s;
 FILE *input4;
 char j;
 char r;
-int q, u;
+int q, u, b;
 
 
 
@@ -209,12 +209,7 @@ a = 0;
 for (feof(input)==0; a<= 30; a++){
     fscanf(input, "%c", &s);
     
-    if(s % 2 == 0){
-        s = s + 2;
-    }
-    else if(s % 2 != 0){
-        s = s + 2;
-    }
+    
     
     if(s == 67){
         s = 65;
@@ -300,41 +295,25 @@ break;
     case 4:
     
     printf("\nThe decryption resulted with:\n");
-    input = fopen("input3.txt", "r");
-    for(feof(input) == 0; r <= 20; r++){
+    input = fopen("input4.txt", "r");
+    while(feof(input)== 0){
         fscanf(input, "%c", &r);
-        
-        if(r % 2 == 0){
-            r = r + 2;
-            
-            if (q == r){
-                r = r - 2;
-            }
-            q = r;
-        printf("%c = %d", r, r);
-        }
-        else if(r % 2 != 0){
-            u = r + 2;
-            
-            if(q == u){
-                u = r - 2;
-            }
-            q = u;
-        printf("%c = %d", r, u);
-        }
-        
+        printf("%c", r);
     }
+    printf("\n");
+    input = fopen("input4.txt", "r");
+    j = 0;
+    for(feof(input) == 0; j <= 20; j++){
+        fscanf(input, "%c", &r);
+        printf("%c", r);
+   
     
     
     
     
-    
-
-
-
-
-
 }
+}
+
     return(0);
 }
 
