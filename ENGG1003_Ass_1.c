@@ -4,8 +4,7 @@
 int main(){
                                 //variable for switch
 int x;                             
- 
-                                //variables for case 1
+                                 //variables for case 1
 FILE *input;
 char c;
 int v, k;
@@ -29,6 +28,8 @@ int q, u, b;
 
 
 
+
+
 printf("Please select one of the following:\n1) encrytion with rotation cipher\n2) decrytion with rotation cipher");
 printf("\n3) encryption with substitution\n4) decryption with substitution\n");
                                                            //Printing the users options to screen, taking a new line per option.
@@ -36,6 +37,28 @@ scanf("%d", &x);
                                                            //Scanning users input (int x) 
 switch (x){                                                //Start of "switch", "x" is used to determine which case (corresponding to equivalent
     case 1:                                                //user inputed value) e.g. 1 ==> case 1:
+        caseOne();
+        break;
+    case 2:
+        caseTwo();
+        break;
+    case 3:
+        caseThree();
+        break;
+    case 4:
+        caseFour();
+        break;
+}    
+
+return(0);
+}
+
+
+
+    
+
+        
+void caseOne(){        
         input = fopen("input.txt", "r");                   //Opening and reading input file and notifying the user what the message to be encrpted is
         printf("The following text will be encryted:\n");
         while(feof(input) == 0) {                          //Using a while loop to access the file until finished
@@ -125,9 +148,10 @@ switch (x){                                                //Start of "switch", 
     
             }
         }
-break;                                          //END OF CASE 1//
-    case 2:                                                         //User input option 2 (int x)
-        
+    return();
+    }
+                                                        //User input option 2 (int x)
+void caseTwo();{        
         input = fopen("input2.txt", "r");                           //Opening and reading input2 file and printing a blank space (f == 32)
         printf("The following numbers will be decrypted:\n");       //Dsiplaying to the user that the folloing printed text will be decrypted
         while(feof(input) == 0){
@@ -193,9 +217,10 @@ break;                                          //END OF CASE 1//
             }
             printf("\n");                                  //Tidy finish, taking new line after message (y) is displayed 
         }
-
- break;                                         //END OF CASE 2//
-    case 3:
+        return;
+}
+                                         //END OF CASE 2//
+void caseThree();{
 input = fopen("input3.txt", "r");
 printf("The following message will be encrypted:\n");
 while(feof(input)== 0){
@@ -292,8 +317,9 @@ for (feof(input)==0; a<= 30; a++){
     
 }
 printf("\n");
-break;
-    case 4:
+return();
+}
+void caseFour();{
     //The deryption process will only decrypt whatever the text from case 3 encrypted 
     printf("\nThe decryption resulted with:\n");
     input = fopen("input4.txt", "r");
@@ -385,10 +411,9 @@ break;
         printf("%c", r);
 }
 printf("\n");
+return();
 }
 
-    return(0);
-}
 
 
         
