@@ -185,19 +185,19 @@ void caseTwo(){                                         //Function caseTwo
         scanf("%d", &d);                                   //Explaining 25 is the solution to input2 values (f), most other keys will work
                                                            //cause a rotation- however will not produce the correct message from input
         if (d < -25){                                      //Following "if/else if" statements to ensure key is within boundaries, if so
-            printf("Key error\n");                         //the program displays the error and stops
+            printf("Key error\n");                         //the program displays the error and stops. If "d" is less than -25, print error
         }
         else if (d == 0){
-            printf("Key error\n");
+            printf("Key error\n");                         //If "d" is equal to 0, print error
         }
         else if (d > 25){
-            printf("Key error\n");
+            printf("Key error\n");                         //If "d" is greater than 25, print error
         }
         else{                                              //Once "d" is adequate, input2 is opened then read over iterations
-        input2 = fopen("input2.txt", "r");                  //"if/else if" statements set to pick up spaces (32) in "f" and to 
+        input2 = fopen("input2.txt", "r");                 //"if/else if" statements set to pick up spaces (32) in "f" and to 
         z = 0;                                             //prevent the last "f" from being used and displayed as result (y)
-            for(feof(input2)==0;  z <= 20; z++)             //"for" loop use to perform iterations of input2 
-            {
+            for(feof(input2)==0;  z <= 20; z++){           //"for" loop use to perform iterations of input2 
+            
              fscanf(input2,"%c", &f);                       //Reading individual values for "f" from input2 per iteration
 
              if (f == 32){
@@ -212,9 +212,6 @@ void caseTwo(){                                         //Function caseTwo
                  y = f - d;                                //and to also take action when the results (y) boundaries are exceeded (0 to 25)
                     if (y < 0){
                       y = 0 - (y);
-                        //printf("%d ", y);                //Other print to display "y", "f"'s new value
-                        //y = y + 65;                      //Equation to allow "y" to align with appropriate character (ascii code)
-                        //printf("%c = %d ", y, y)         //Other print to display both "y"'s character and integer value
                     }
                 }
                 else if (d < 0){                           //Following "else if/if" statements to recognise "d" as negative
@@ -223,11 +220,12 @@ void caseTwo(){                                         //Function caseTwo
                         y = 0 + (y - 25);
                     }
                 }
+                
                 w = f;
                 y = y + 65;                                //Equation to allow "y" to align with appropriate character (ascii code)
                 //printf("%c = %d ", y, y);                //Other print to display both "y"'s character and integer value
                 printf("%c", y);                           //Printing character (y) i.e. decrypted message
-                }
+             }
             }
             printf("\n");                                  //Tidy finish, taking new line after message (y) is displayed 
         }
