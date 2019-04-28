@@ -75,16 +75,16 @@ void caseOne(){                                           //Function caseOne,
         printf("\nPlease input key to perform encrytion\n");        //Printing to ask for and reading user's inputed key (k)
         scanf("%d", &k);
                                                          
-        if (k == 0)                                                 //Following "if/if else" statements determined by key (k)
-        {                                                           //Whether "k" is 0 or exceeds the key limits determines outcome
+        if (k == 0){                                                //Following "if/if else" statements determined by key (k)
+                                                                    //Whether "k" is 0 or exceeds the key limits determines outcome
             printf("Key error\n");                                  //"if" k is equal to 0, print error
         }
-        else if (k < -25)
-        {
+        else if (k < -25){
+        
             printf("Key error\n");                                  //"if" k is less than -25, print error, stop
         }
-        else if (k > 25)
-        {
+        else if (k > 25){
+        
             printf("Key error\n");                                  //"if" k is greater than 25, print error, stop
         }
         else if (-25 <= k <= 25)
@@ -93,25 +93,22 @@ void caseOne(){                                           //Function caseOne,
    
    input = fopen("input.txt", "r");                                 //Opening and reading input
    n = 0;
-        for(feof(input)==0; n <= 15; n++)       //"for" loop to run iterations of the input, carrying out encrption per interation (int n) 
-            {                                   //Ensure that the input file ends with a "space" and "n" is as however long as input, with +1 space
-             fscanf(input,"%c", &c);            //Reading an individual input per iteration
-
-              if (n == 32){                     //Following "if/else if" statements allow the program to detect spaces in the message (i.e. 32)               
-                printf(" ");                    //Once a space is recognised, the program will print a blank space rather than an unwanted value 
-                }                               //Spaces are recognised in both iterations (n) and printed results (c), leaving just a space 
-              else if (v != c){                 
-                v = c;
-                 if (v == 32)
-                  {
-                   printf(" ");
-                  }
-                 else                           //Once the spaces have been filtered, the integer value (ascii code) are reduced to a 0 to 25 list
-                  {                             //(As the initial ascii codes for inputed characrters lie on 65 to 90)
-                   v = c - 65;
+   for(feof(input)==0; n <= 15; n++){           //"for" loop to run iterations of the input, carrying out encrption per interation (int n) 
+                                                //Ensure that the input file ends with a "space" and "n" is as however long as input, with +1 space
+        fscanf(input,"%c", &c);                 //Reading an individual input per iteration
+        if (n == 32){                           //Following "if/else if" statements allow the program to detect spaces in the message (i.e. 32)               
+            printf(" ");                        //Once a space is recognised, the program will print a blank space rather than an unwanted value 
+        }                                       //Spaces are recognised in both iterations (n) and printed results (c), leaving just a space 
+        else if (v != c){                 
+            v = c;
+            if (v == 32){
+                printf(" ");
+            }
+            else{                               //Once the spaces have been filtered, the integer value (ascii code) are reduced to a 0 to 25 list
+                v = c -65;                      //(As the initial ascii codes for inputed characrters lie on 65 to 90)
                    //printf("%c = %d\n", c, v); //Other print to display char "c"'s new integer value
-                  }
-             }
+            }
+        }
     
      if (v == 32)
      {
@@ -121,41 +118,35 @@ void caseOne(){                                           //Function caseOne,
      }                                          //"if" statement to account for spaces created when int v is 32 (space), this also
                                                 //causes the program to drop to a new line per space in the message
      else{
-        if (k > 0)                              //Using a "v" and positive "k" to perform a rotation, with following "if" statements
-        {                                       //to continue a "chain" like behaviour when "e" exceeds the limits of "c" (0 to 25)
-          if ( 0 <= (v + k) <= 25 )              
-            {                                   //int e is the resulting value of the rotation process
-             e = k - v;
-               if (e < 0)
-               {
-                e = 26 + e;
-               }
+        if (k > 0){                             //Using a "v" and positive "k" to perform a rotation, with following "if" statements
+                                                //to continue a "chain" like behaviour when "e" exceeds the limits of "c" (0 to 25)
+          if ( 0 <= (v + k) <= 25 ){              
+            e = k - v;                                  //int e is the resulting value of the rotation process
+              if (e < 0){
+                 e = 26 + e;
+              }
              //printf("%c = %d ", c, e);        //Other print to allow user to see what each char "c"'s new equivalent integer (e) is
              //printf("%d ", e);                //Other print to allow user to see integer (e) 
             e = e + 65;
             printf("%c", e);                    //Printing "e"'s new single characters per iteration buy adding 65 back to the value (e)        //PRINT NEW CHARS
             }
         }
-        else if (k < 0)                         //Using a "v" and negative "k" to perform a roation, with follwoing "if/else if" statements
-        {                                       //to continue a "chain" like behaviour when "e" exceeds the limits of "c" (0 to 25)
-            if ( (v + k) <= 0)
-            {
+        
+        else if (k < 0){                        //Using a "v" and negative "k" to perform a roation, with follwoing "if/else if" statements
+            if( (v + k) <= 0){                  //to continue a "chain" like behaviour when "e" exceeds the limits of "c" (0 to 25)
              e = 25 + (v + k);
             }
-            
-            else if ( (v + k) > 0)
-            {
+            else if ( (v + k) > 0){
              e = 0 + (v + k) ;   
             }
          //printf("%c = %d ", c, e);            //Other print to allow user to see what each char "c"'s new equivalent integer (e) is
          //printf("%d ", e);                    //Other print to allow user to see integer (e)
          e = e + 65;
          printf("%c", e);                              
-        }
+        }  
+     }
     }
-    
-            }
-        }
+    }
     return;
     }
                                                         
@@ -228,8 +219,8 @@ void caseTwo(){                                         //Function caseTwo
              }
             }
             printf("\n");                                  //Tidy finish, taking new line after message (y) is displayed 
-        }
-        return;
+      }
+return;
 }
                                          
 void caseThree(){                                          //Fucntion caseTwo
