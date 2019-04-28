@@ -26,9 +26,9 @@ int i, a;
 char s;
                                 //variables for case 4
 FILE *input4;
-char j;
+int j;
 char r;
-int q, u, b;
+
 
 
 printf("Please select one of the following:\n1) Encrytion with rotation cipher\n2) Decrytion with rotation cipher");
