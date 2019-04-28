@@ -110,7 +110,7 @@ void caseOne(){                                           //Function caseOne,
         }
     
      if (v == 32){
-         printf("\n");  // \n                   
+         printf("\n");                     
      }                                          //"if" statement to account for spaces created when int v is 32 (space), this also
                                                 //causes the program to drop to a new line per space in the message
      else{
