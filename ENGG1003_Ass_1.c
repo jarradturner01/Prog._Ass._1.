@@ -248,7 +248,7 @@ printf("%c", s);                                                         //Print
 }
 printf("\nThe encrypted result is:\n");               //Print displaying the following text will be the message encrypted
 input3 = fopen("input3.txt", "r");                    //Opening and reading input3.txt
-a = 0;                                                //Intializing "a" to have a value of zero before counting
+a = 0;                                                //Intializing "a" to have a value of zero before counting (interations)
 for (feof(input3)==0; a<= 30; a++){                   //"for" loop to read input3.txt char by char over 30 interations
     fscanf(input3, "%c", &s);                         //input3.txt must be in capitals and include a space at the end of file,  
                                                       //and "a" must be as large to accommodate for input's (s) resulting length
@@ -340,19 +340,19 @@ void caseFour(){                                       //Fucntion caseFour
     FILE *input4;                                      //Decalaring varialbes
     int j;
     char r;
-                                                       //NOTE: The deryption process will only decrypt whatever the text from case 3 encrypted 
-                                                       //Hence whatever the result of caseThree is needs to be typed into input4.tx
-    printf("\nThe message to undergo decryption:\n");
-    input4 = fopen("input4.txt", "r");
-    while(feof(input4)== 0){
-        fscanf(input4, "%c", &r);
-        printf("%c", r);
+                                                       //NOTE: The decryption process will only decrypt whatever the text from case 3 encrypted 
+                                                       //Hence whatever the result of caseThree is needs to be typed into input4.txt
+    printf("\nThe message to undergo decryption:\n");  //Printing to tell user what will be decrypted
+    input4 = fopen("input4.txt", "r");                 //Opening and reading input4.txt
+    while(feof(input4)== 0){                           //"while" loop used to read input4.txt until end of file
+        fscanf(input4, "%c", &r);                      //Reading input4.txt (char r)
+        printf("%c", r);                               //Printing input4.txt (r)
     }
-    printf("\n");
-    printf("The decrypted message results with:\n");
-    input4 = fopen("input4.txt", "r");
-    j = 0;
-    for(feof(input4) == 0; j <= 25; j++){
+    printf("\n");                                      //New line for better display purposes for user
+    printf("The decrypted message results with:\n");   //Printing to user, that the following text is the decrypted message
+    input4 = fopen("input4.txt", "r");                 //Opening and reading file
+    j = 0;                                             //Intializing "j" to have a value of 0 before counting (iterations)
+    for(feof(input4) == 0; j <= 25; j++){              ///////////////
         fscanf(input4, "%c", &r);
         //printf("%c", r);
         if(r == 67){
