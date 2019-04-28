@@ -46,19 +46,18 @@ switch (x){                                                //Start of "switch", 
         caseThree();                                       //Calling fucntion (caseThree), opens and carries out caseThree
         break;
     case 4:                                                //Option 4
-        caseFour();                                        //Calling fucntiion (caseFour), opens and carries out caseFour
+        caseFour();                                        //Calling fucntion (caseFour), opens and carries out caseFour
         break;
     case 5:                                                //Option 5 (incomplete)
         printf("To be installed\n");
         break;
-    case 6:                                                //OPtion 6 (incomplete)
+    case 6:                                                //Option 6 (incomplete)
         printf("To be installed\n");
         break;
 }
 return 0;                                                 //  END OF MAIN  //  
 }
 
-        
 void caseOne(){                                           //Function caseOne, 
     FILE *input;                                          //Declaring variables
     char c;
@@ -91,8 +90,8 @@ void caseOne(){                                           //Function caseOne,
         {
             printf("You've selected %d as your key\n", k);          //"if" k is lies between -25 and 25, print selected key and continue
    
-   input = fopen("input.txt", "r");                                 //Opening and reading input
-   n = 0;
+   input = fopen("input.txt", "r");             //Opening and reading input1.txt
+   n = 0;                                       //Initializing "n" to equal zero before counting (iterations)
    for(feof(input)==0; n <= 15; n++){           //"for" loop to run iterations of the input, carrying out encrption per interation (int n) 
                                                 //Ensure that the input file ends with a "space" and "n" is as however long as input, with +1 space
         fscanf(input,"%c", &c);                 //Reading an individual input per iteration
@@ -185,13 +184,13 @@ void caseTwo(){                                         //Function caseTwo
             printf("Key error\n");                         //If "d" is greater than 25, print error
         }
         else{                                              //Once "d" is adequate, input2 is opened then read over iterations
-        input2 = fopen("input2.txt", "r");                 //"if/else if" statements set to pick up spaces (32) in "f" and to 
-        z = 0;                                             //prevent the last "f" from being used and displayed as result (y)
+        input2 = fopen("input2.txt", "r");                  
+        z = 0;                                             //Initializing "z" equal to zero before counting (iterations)
             for(feof(input2)==0;  z <= 20; z++){           //"for" loop use to perform iterations of input2 
             
-             fscanf(input2,"%c", &f);                       //Reading individual values for "f" from input2 per iteration
-
-             if (f == 32){
+             fscanf(input2,"%c", &f);                      //Reading individual values for "f" from input2 per iteration
+                                                           //"if/else if" statements set to pick up spaces (32) in "f" and to
+             if (f == 32){                                 //prevent the last "f" from being used and displayed as result (y)
                  printf(" ");                              //Recognised spaces (32) result in a blank space
              }
              else if (w == f){                             //Recognise end of input2 
