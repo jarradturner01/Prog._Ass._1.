@@ -249,14 +249,14 @@ printf("%c", s);                                                         //Print
 printf("\nThe encrypted result is:\n");               //Print displaying the following text will be the message encrypted
 input3 = fopen("input3.txt", "r");                    //Opening and reading input3.txt
 a = 0;                                                //Intializing "a" to have a value of zero before counting (interations)
-for (feof(input3)==0; a<= 30; a++){                   //"for" loop to read input3.txt char by char over 30 interations
+for (feof(input3)==0; a<= 30; a++){                   //"for" loop to read input3.txt char by char over "a" interations
     fscanf(input3, "%c", &s);                         //input3.txt must be in capitals and include a space at the end of file,  
                                                       //and "a" must be as large to accommodate for input's (s) resulting length
     if(s == 67){                                      //Following "if/else if" statements hard code a substition encryption
-        s = 65;                                       //to "s", to switch the values of character's being ecrypted
+        s = 65;                                       //to "s", to switch the values of character's being ecrypted (ascii code)
     }                                                
-    else if(s == 65){
-        s = 67;
+    else if(s == 65){                                 //NOTE: some attempt was made to create and algorithm to perform the hard 
+        s = 67;                                       //coding but the attempts failed, hence hard coding was the alternative
     }
     else if(s == 66){
         s = 68;
@@ -332,7 +332,7 @@ for (feof(input3)==0; a<= 30; a++){                   //"for" loop to read input
     }
     
     printf("%c", s);                                   //Once "s" has been encrypted accordingly, it is printed to display 
-}                                                      //Meaning a character (s) is read, encrypted and printed each iteration   
+}                                                      //Meaning a character (s) is read, encrypted and printed each iteration (a)   
 printf("\n");                                          //Printing a new line for tidy finsih after "for" loop
 return;
 }
@@ -352,14 +352,14 @@ void caseFour(){                                       //Fucntion caseFour
     printf("The decrypted message results with:\n");   //Printing to user, that the following text is the decrypted message
     input4 = fopen("input4.txt", "r");                 //Opening and reading file
     j = 0;                                             //Intializing "j" to have a value of 0 before counting (iterations)
-    for(feof(input4) == 0; j <= 25; j++){              ///////////////
-        fscanf(input4, "%c", &r);
+    for(feof(input4) == 0; j <= 25; j++){              //"for" loop to read input4.txt char by char over "j" iterations
+        fscanf(input4, "%c", &r);                      //Assuring "j" is large enough to accomodate for the length of "r" 
         //printf("%c", r);
-        if(r == 67){
-            r = 65;
+        if(r == 67){                                   //Following "if/else if" statements hard coded to decrypted message
+            r = 65;                                    //Reversing the encrypted chars to orignal values (ascii code)
         }
-        else if(r == 65){
-            r = 67;
+        else if(r == 65){                              //NOTE: attempts were made to create an algorithm to perfomr the hard code
+            r = 67;                                    //however attmepts failed, hence hard coding was the alternative
         }
         else if(r == 68){
             r = 66;
@@ -400,7 +400,7 @@ void caseFour(){                                       //Fucntion caseFour
         else if(r == 80){
             r = 78;
         }
-        else if(r == 78){    //SOMETHING IS WRONG WITH N AND P
+        else if(r == 78){    
             r = 80;
         }
         else if(r == 81){
@@ -430,9 +430,9 @@ void caseFour(){                                       //Fucntion caseFour
         else if( r == 90){
             r = 88;
         }
-        printf("%c", r);
-}
-printf("\n");
+        printf("%c", r);                               //Once "r" has been decrypted accordingly, it is printed to display
+}                                                      //Meaning a character (r) is read, decrpyted and printed per iteration (j)
+printf("\n");                                          //Printing a new line for tidy finish after "for"loop
 return;
 }
 
